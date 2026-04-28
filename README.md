@@ -82,7 +82,7 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
 > [!TIP]
 > This engine uses Python 3.12 and the PyQGIS API to bypass the Global Interpreter Lock (GIL), distributing spatial tasks across 6-8 CPU cores, reducing processing time from hours to minutes.
-*   **View [Documentation](repository/QGIS_Multiprocessor_Audit.py) & check [Snippet](repository/QGIS_Multiprocessor_Audit_README.md)**
+*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) & check [Snippet](repository/QGIS_Multiprocessor_Audit.py)**
 
 ### 2. PymuPDF_corrections.py → Cartographic Patching & PDF Stream Manipulation
 **Concept:** Post-processing exported map layouts to avoid time-consuming re-rendering/re-plotting.
@@ -90,26 +90,26 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 > A "surgical" approach to map corrections. Instead of re-rendering layouts, this script intervenes directly in the PDF's binary stream to update logos, fix typos, and adjust font styles at the sub-point level.
 > This utility was developed to solve a critical bottleneck in the map production pipeline, when we realised that the logo of Contracting Authority had recenty changed and some minor but annoying label errors were detected in hundreds of already-exported A0 maps...
 > This script allowed for instantaneous corrections directly on the PDF files, saving approximately 2-3 working days of re-plotting.
-*   **View [Documentation](repository/PymuPDF_corrections.py) & check [Snippet](repository/PymuPDF_corrections_README.md)**
+*   **View [Documentation](repository/PymuPDF_corrections_README.md) & check [Snippet](repository/PymuPDF_corrections.py)**
 
 ### 3. BatchExportPoints.lsp → CAD-to-GIS Data Bridge (AutoLISP & ObjectDBX)
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
 > [!NOTE]
 > Utilizing ObjectDBX to read and extract coordinates from AutoCAD blocks and entities without the overhead of opening the graphical editor, ensuring a seamless data pipeline to GIS formats.
-*   **View [Documentation](repository/BatchExportPoints.lsp) & check [Snippet](repository/BatchExportPoints_README.md)**
+*   **View [Documentation](repository/BatchExportPoints_README.md) & check [Snippet](repository/BatchExportPoints_README.lsp)**
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
 > [!IMPORTANT]
 > This script was critical for production, as it addressed a persistent styling issue where font styles (Bold/Italics) were not properly saved in QGIS projects. 
 > By implementing a data-defined override engine, I ensured that thousands of map annotations remained compliant with national cartographic specifications.
-*   **View [Documentation](repository/QGZ_Styling_Engine.py) & check [Snippet](repository/QGZ_Styling_Engine_README.md)**
+*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) & check [Snippet](repository/QGZ_Styling_Engine.py)**
 
 ### 5. Intelligent Parallel File Deployment (PowerShell & RoboCopy)
 **Concept:** Multi-threaded distribution of GIS deliverables across complex, national-scale directory structures.
 > [!NOTE]
 > An IT-focused utility that uses parallel thread orchestration (RoboCopy /MT) to manage massive file migrations while maintaining strict "SHAPE/OTA/Layer" hierarchical integrity.
-*   **View [Documentation](repository/COPY_in_STRUCTURE.ps1) & check [Snippet](repository/COPY_in_STRUCTURE_README.md)**
+*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) & check [Snippet](repository/COPY_in_STRUCTURE.ps1)**
 
 ### 6. SHP_VERIFIER.py → Thorough Final Step Validation of Data before Deliverance to Contracting Authority
 **Concept:** Ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
