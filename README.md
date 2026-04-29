@@ -13,7 +13,7 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 ## 🛠 Tech Stack & Expertise
 *   **Domain Expertise:** National Cadastral Surveys, Strategic Urban Planning, Settlement Delimitation.
 *   **GIS Software:** QGIS (Advanced/PyQGIS), ArcGIS Pro/Desktop, AutoCAD Map 3D.
-*   **Automation & Data:** Python for GIS data management and map creation, SQL for Spatial Database Management.
+*   **Automation & Data:** Python for GIS data management and map creation, SQL for Spatial Database Management, AutoLISP & SCR scripts for CAD, PowerShell (ps1 scripts) for acceleration of IT processes.
 
 ---
 
