@@ -19,6 +19,16 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 
 ## 🗺 Featured Projects (Cadastre & Urban Planning)
 
+> [!CAUTION]
+> ## ⚖️ Legal Disclaimer
+> The maps and spatial data presented in this portfolio were developed by me in a professional capacity during my tenure at CHOROMETRIA Consulting Engineers. 
+> *   **Ownership:** The final deliverables and the intellectual property of the data belong to the **Hellenic Public Sector** (Hellenic Land Registry / **Ministry of Digital Governance**). 
+> *   **Purpose:** These files are shared for **demonstration of professional competence, cartographic quality, and technical GIS skills only**. 
+> Unauthorized reproduction or commercial use is strictly prohibited.
+> 
+
+---
+
 ### 1. National Land Registry (Major Scale Cadastral Surveys)
 **Context:** Leading GIS technical coordination for Hellenic Cadastre studies, including the Athens metropolitan area, Voiotia - Fokida Prefectures, Rethymno Crete, etc.
 *   **Key Tasks:** Large-scale spatial data management, Topology validation, Property boundary reconciliation.
@@ -36,12 +46,12 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 
 #### 📍 ATHENS (Local Urban Plan)
 *   **🔍 [View 'BUILT ENVIRONMENT: BUILDING HEIGHTS - Distribution of Land Parcels based on Maximum Number of Floors, at Municipal Level' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1hdHbPut16mwaog5G15jp-lLXUOMSZlow/preview)**
+*   **🔍 [View 'Alternative Scenarios Diagram & Map of Statutory Boundaries (Municipal Units, Neighborhoods & Local Communities)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1WkyTlH6VZM0-tCOrzB6YIyVArw86OXmf/preview)**
 *   **🔍 [View 'PUBLIC REAL ESTATE - Ownership Distribution of Municipal (City of Athens) and State-Owned Assets, at Municipal Level' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1agmGQqyVES6svHz7BGVWfPqeNqW3BLr9/preview)**
 *   **🔍 [View 'FOREIGN OWNERSHIP (CHINA) - Distribution of Land Parcels owned by Residents or Entities based in China, at Municipal Level)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1o15jzjrsPy_rvaQIrOoQfTtnX68s62h4/preview)**
 *   **🔍 [View 'PLOT SIZES - Distribution of Land Parcels based on Cadastral Areas (Level: Municipal Districts 1, 2, 3, 7)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1GYnHmhzAzmzxCgLwxImoydbOz8n5l2f9/preview)**
 *   **🔍 [View 'COMMERCIAL LAND USE - Distribution of Land Parcels with Divided or Undivided Properties and Commercial Activities (Level: Municipal District 1)' Map - 1:10000 (PDF)](https://drive.google.com/file/d/1CDfOAaO4dsh1R37baieLd4kILJZgyGVI/preview)**
 *   **🔍 [View 'BASEMENT RESIDENCES - Distribution of Land Parcels with Divided Properties and Subterranean Residential Use (Level: Municipal District 1)' Map - 1:10000 (PDF)](https://drive.google.com/file/d/1e40BjA6_gUFRrpHMJBP0fEM_QJh4YUOD/preview)**
-*   **🔍 [View 'Alternative Scenarios Diagram & Map of Statutory Boundaries (Municipal Units, Neighborhoods & Local Communities)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1WkyTlH6VZM0-tCOrzB6YIyVArw86OXmf/preview)**
 
 #### 📍 CORINTH (Local Urban Plan)
 *   **🔍 [View 'Regional Context & Integration' Map - 1:400000 (PDF)](https://drive.google.com/file/d/1l_UHRWgQ1TA13GE-vaNt2YEk9JnrlhFb/preview)**
@@ -63,17 +73,6 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 *   **🔍 [View 'DELIMITATION OF "KAMARES" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1WXNvza6gzYQ0nnQa-ILQ2z38Bk7ZJjKE/preview)**
 *   **🔍 [View 'DELIMITATION OF "NIKOLEIKA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1P3keHbKqXaWvY4EsPv_rMPsHYG3VDc61/preview)**
 *   **🔍 [View 'DELIMITATION OF "PARALIA PLATANOU" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/19NqMUDUvue7OTUfZR2rc91X1kvuvvTdK/preview)**
-
----
-
-> [!CAUTION]
-> ## ⚖️ Legal Disclaimer
-> The maps and spatial data presented in this portfolio were developed by me in a professional capacity during my tenure at CHOROMETRIA Consulting Engineers. 
-> *   **Ownership:** The final deliverables and the intellectual property of the data belong to the **Hellenic Public Sector** (Hellenic Land Registry / **Ministry of Digital Governance**). 
-> *   **Purpose:** These files are shared for **demonstration of professional competence, cartographic quality, and technical GIS skills only**. 
-> Unauthorized reproduction or commercial use is strictly prohibited.
->
-> 
 
 ---
 
