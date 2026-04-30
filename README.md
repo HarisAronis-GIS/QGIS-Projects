@@ -6,7 +6,7 @@ Samples of maps made in QGIS/ArcGIS and scripts (Python/AutoLISP/PS1) for automa
 ## 👋 About Me
 I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the intersection of **Cartography, GIS, and Urban Planning**. Currently serving as the **Head of the GIS Department at CHOROMETRIA**, leadimg large-scale projects for the **Hellenic National Land Registry** and complex Local Urban Plan studies. My approach combines veteran field knowledge with modern Python automation and Geomatics strategy. [This is **My Professional Philosophy**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-professional-philosophy) and my [**Contact info**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-contact-info).
 
-📄 [Download my Resume (PDF)](./ARONIS%20resume.pdf)
+📄 [Download **my Resume** (PDF)](./ARONIS%20resume.pdf)
 
 ---
 
