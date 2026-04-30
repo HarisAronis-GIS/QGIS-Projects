@@ -76,6 +76,47 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 
 ---
 
+## 🐍 Programming & Automation Portfolio
+
+I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, and **PowerShell** to automate large-scale geospatial workflows and ensure high-standard data integrity.
+
+> [!NOTE]
+> Due to proprietary restrictions, full source code is not public. But you can find [below](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-code-highlights--technical-innovation) detailed **Technical READMEs** and **Snippets** of selected scripts that demonstrate innovating *problem-solving* and/or *resources-saving* processes.
+
+### 🛠️ Script & Tool Catalog
+
+#### I. Data Validation & Quality Control (QA/QC)
+*   **SHP_VERIFIER.py:** Comprehensive validation engine for deliverable folders. It ensures folder structure compliance, verifies/corrects field schemas (names, types, lengths), and auto-generates mandatory missing layers.
+*   **ChkGeom.py:** High-performance **multiprocessing** engine (6 parallel threads) that identifies and fixes topology errors (self-intersections, null geometries), exporting georeferenced error logs.
+*   **ROADS_Check.py:** Specialized validation for linear road networks. Prevents server-side loading errors by generating "Erase" and "Error" layers using multi-source spatial joins.
+*   **Stage7_Filter.py:** High-speed parser for massive "Prechecks.txt" log files. Isolates critical forestry polygon errors from multi-thousand-line server reports.
+*   **Find_Multiparts.py:** Scans layers for non-compliant multi-part geometries and generates detailed reports for manual or automated single-part conversion.
+*   **Find_Irregulars.py:** Spatial analysis script for identifying and exporting irregular parcel geometries for manual cadastral audit.
+
+#### II. ETL, Database & Workflow Integration
+*   **Cadastre Points Pipeline (LISP + Python):** A hybrid workflow (**BatchExportPoints.lsp → SplitPoints.py**) for generating schema-compliant "BLOCK_PNT" shapefiles from topographic CAD surveys and tachymetric points saves as points or blocks in CAD files.
+*   **Update_from_Merge.py:** Synchronizes attribute corrections (e.g., ADDRESS/NUM fixes) from a "Master" layer back to hundreds of individual shapefiles across a project's directory structure.
+*   **Fix_DBOUND_KYR.py:** Automated batch-update for Administrative Act boundaries across hundreds of CAD basemaps, synchronizing decision IDs and dates.
+*   **PARCELS_Compare.py:** Spatial change-detection script that compares parcel geometries between different project phases, classifying the degree of transformation.
+*   **Building Data Integrator (SQL + Python):** Extraction of building numbers from Oracle DB and automated array-based insertion into AutoCAD Map to prevent label overlapping.
+*   **FBOUND_split.py:** Automated forestry data processing (clipping, area calculations, and attribute formatting) while filtering out sliver polygons.
+*   **VRT_Manager.py:** Large-scale raster management. Creates Virtual Raster Templates for hundreds of Orthophotos, builds Pyramids and performs batch project updates.
+
+#### III. Advanced Cartography & Map Production
+*   **PymuPDF_corrections.py:** High-speed post-processing of exported PDFs. Replaces logos, fixes typos, and adjusts font sizes directly in the PDF stream, avoiding time-consuming re-plotting.
+*   **BulkRuleBasedExpressions.py:** Batch update of hundreds of QGIS Projects (.qgz). Automates complex rule-based labeling and font style overrides that QGIS fails to retain.
+*   **Batch_Export_Atlas_PDF.py:** Mass production of map sheets with automated Map Theme switching across multiple atlas layouts.
+*   **PST2CAD & Move_KAEK (Py + LISP):** Generates centroids from parcels and exports them to DWG with justified KAEK labels aligned to parcel centers.
+*   **Statistics_Engine.py:** Automated statistical analysis of built environments, generating floor area distributions per urban unit.
+*   **ExportToPDF.py:** Standardized PDF export engine featuring automated grid coordinate placement according to national specifications.
+
+#### IV. System Administration & File Management
+*   **Smart_Merge.py:** A high-speed merging utility for standardized layers (PST, ASTOTA, etc.) supporting wildcards and batch input from Excel/CSV lists.
+*   **COPY_in_STRUCTURE.ps1 (PowerShell):** Intelligent file distribution tool that copies multiple shapefiles while maintaining complex subfolder structures per Municipality (OTA).
+*   **SHP_Cleanup.py:** Automated sanitization tool that identifies and removes non-compliant files from final delivery packages.
+
+---
+
 ## 💻 Code Highlights & Technical Innovation
 *Selected snippets demonstrating advanced automation and surgical problem-solving.*
 
@@ -119,47 +160,6 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 > If it finds "FIXABLE" errors, with a press of a button it rectifies them. 
 > If it flags the errors as "MANUAL", it gives you an analytical report on your desktop to fix them without searching and knowing what to do.
 *   **[View Documentation](repository/SHP_VERIFIER_README.md)**
-
----
-
-## 🐍 Programming & Automation Portfolio
-
-I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, and **PowerShell** to automate large-scale geospatial workflows and ensure high-standard data integrity.
-
-> [!NOTE]
-> Due to proprietary restrictions, full source code is not public. Detailed **Technical READMEs** for each workflow (Objective, Logic, Tech Stack, and Snippets) are currently being uploaded to the `/repository` folder.
-
-### 🛠️ Script & Tool Catalog
-
-#### I. Data Validation & Quality Control (QA/QC)
-*   **SHP_VERIFIER.py:** Comprehensive validation engine for deliverable folders. It ensures folder structure compliance, verifies/corrects field schemas (names, types, lengths), and auto-generates mandatory missing layers.
-*   **ChkGeom.py:** High-performance **multiprocessing** engine (6 parallel threads) that identifies and fixes topology errors (self-intersections, null geometries), exporting georeferenced error logs.
-*   **ROADS_Check.py:** Specialized validation for linear road networks. Prevents server-side loading errors by generating "Erase" and "Error" layers using multi-source spatial joins.
-*   **Stage7_Filter.py:** High-speed parser for massive "Prechecks.txt" log files. Isolates critical forestry polygon errors from multi-thousand-line server reports.
-*   **Find_Multiparts.py:** Scans layers for non-compliant multi-part geometries and generates detailed reports for manual or automated single-part conversion.
-*   **Find_Irregulars.py:** Spatial analysis script for identifying and exporting irregular parcel geometries for manual cadastral audit.
-
-#### II. ETL, Database & Workflow Integration
-*   **Cadastre Points Pipeline (LISP + Python):** A hybrid workflow (**BatchExportPoints.lsp → SplitPoints.py**) for generating schema-compliant "BLOCK_PNT" shapefiles from topographic CAD surveys and tachymetric points saves as points or blocks in CAD files.
-*   **Update_from_Merge.py:** Synchronizes attribute corrections (e.g., ADDRESS/NUM fixes) from a "Master" layer back to hundreds of individual shapefiles across a project's directory structure.
-*   **Fix_DBOUND_KYR.py:** Automated batch-update for Administrative Act boundaries across hundreds of CAD basemaps, synchronizing decision IDs and dates.
-*   **PARCELS_Compare.py:** Spatial change-detection script that compares parcel geometries between different project phases, classifying the degree of transformation.
-*   **Building Data Integrator (SQL + Python):** Extraction of building numbers from Oracle DB and automated array-based insertion into AutoCAD Map to prevent label overlapping.
-*   **FBOUND_split.py:** Automated forestry data processing (clipping, area calculations, and attribute formatting) while filtering out sliver polygons.
-*   **VRT_Manager.py:** Large-scale raster management. Creates Virtual Raster Templates for hundreds of Orthophotos, builds Pyramids and performs batch project updates.
-
-#### III. Advanced Cartography & Map Production
-*   **PymuPDF_corrections.py:** High-speed post-processing of exported PDFs. Replaces logos, fixes typos, and adjusts font sizes directly in the PDF stream, avoiding time-consuming re-plotting.
-*   **BulkRuleBasedExpressions.py:** Batch update of hundreds of QGIS Projects (.qgz). Automates complex rule-based labeling and font style overrides that QGIS fails to retain.
-*   **Batch_Export_Atlas_PDF.py:** Mass production of map sheets with automated Map Theme switching across multiple atlas layouts.
-*   **PST2CAD & Move_KAEK (Py + LISP):** Generates centroids from parcels and exports them to DWG with justified KAEK labels aligned to parcel centers.
-*   **Statistics_Engine.py:** Automated statistical analysis of built environments, generating floor area distributions per urban unit.
-*   **ExportToPDF.py:** Standardized PDF export engine featuring automated grid coordinate placement according to national specifications.
-
-#### IV. System Administration & File Management
-*   **Smart_Merge.py:** A high-speed merging utility for standardized layers (PST, ASTOTA, etc.) supporting wildcards and batch input from Excel/CSV lists.
-*   **COPY_in_STRUCTURE.ps1 (PowerShell):** Intelligent file distribution tool that copies multiple shapefiles while maintaining complex subfolder structures per Municipality (OTA).
-*   **SHP_Cleanup.py:** Automated sanitization tool that identifies and removes non-compliant files from final delivery packages.
 
 ---
 
