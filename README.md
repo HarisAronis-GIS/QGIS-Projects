@@ -174,4 +174,5 @@ And above all, **I LOVE MAPS!!!**
 *   **Location:** Athens, Greece
 *   **Email:** harisaronis[at]gmail.com
 *   **LinkedIn:** [https://www.linkedin.com/in/haris-aronis-0720b68]
+
 *(I'm available only for remote collborations)*
