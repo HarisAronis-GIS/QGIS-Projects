@@ -125,6 +125,7 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
 > [!TIP]
 > This engine uses Python 3.12 and the PyQGIS API to bypass the Global Interpreter Lock (GIL), distributing spatial tasks across 6-8 CPU cores, reducing processing time from hours to minutes.
+
 <details>
 <summary>📂 Προβολή Κώδικα: QGIS_Multiprocessor_Audit.py (Python)</summary>
 
@@ -201,7 +202,8 @@ qgs.exitQgis()
 ```
 
 </details>
-*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to code's page[Snippet](repository/QGIS_Multiprocessor_Audit.py)**
+
+*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to [Snippet](repository/QGIS_Multiprocessor_Audit.py)**
 
 ### 2. PymuPDF_corrections.py → Cartographic Patching & PDF Stream Manipulation
 **Concept:** Post-processing exported map layouts to avoid time-consuming re-rendering/re-plotting.
@@ -209,6 +211,7 @@ qgs.exitQgis()
 > A "surgical" approach to map corrections. Instead of re-rendering layouts, this script intervenes directly in the PDF's binary stream to update logos, fix typos, and adjust font styles at the sub-point level.
 > This utility was developed to solve a critical bottleneck in the map production pipeline, when we realised that the logo of Contracting Authority had recenty changed and some minor but annoying label errors were detected in hundreds of already-exported A0 maps...
 > This script allowed for instantaneous corrections directly on the PDF files, saving approximately 2-3 working days of re-plotting.
+
 <details>
 <summary>📂 Προβολή Κώδικα: PymuPDF_corrections.py (Python)</summary>
 
@@ -249,12 +252,13 @@ patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
 
 </details>
 
-*   **View [Documentation](repository/PymuPDF_corrections_README.md) or go to code's page[Snippet](repository/PymuPDF_corrections.py)**
+*   **View [Documentation](repository/PymuPDF_corrections_README.md) or go to [Snippet](repository/PymuPDF_corrections.py)**
 
 ### 3. BatchExportPoints.lsp → CAD-to-GIS Data Bridge (AutoLISP & ObjectDBX)
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
 > [!NOTE]
 > Utilizing ObjectDBX to read and extract coordinates from AutoCAD blocks and entities without the overhead of opening the graphical editor, ensuring a seamless data pipeline to GIS formats.
+
 <details>
 <summary>📂 Προβολή Κώδικα: BatchExportPoints.lsp (AutoLISP)</summary>
 
@@ -291,13 +295,15 @@ patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
 ```
 
 </details>
-*   **View [Documentation](repository/BatchExportPoints_README.md) or go to code's page[Snippet](repository/BatchExportPoints.lsp)**
+
+*   **View [Documentation](repository/BatchExportPoints_README.md) or go to [Snippet](repository/BatchExportPoints.lsp)**
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
 > [!IMPORTANT]
 > This script was critical for production, as it addressed a persistent styling issue where font styles (Bold/Italics) were not properly saved in QGIS projects. 
 > By implementing a data-defined override engine, I ensured that thousands of map annotations remained compliant with national cartographic specifications.
+
 <details>
 <summary>📂 Προβολή Κώδικα: QGZ_Styling_Engine.py (Python)</summary>
 
@@ -351,12 +357,14 @@ def refactor_project_labels(project_path, rules_config):
 ```
 
 </details>
-*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) or go to code's page[Snippet](repository/QGZ_Styling_Engine.py)**
+
+*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) or go to [Snippet](repository/QGZ_Styling_Engine.py)**
 
 ### 5. Intelligent Parallel File Deployment (PowerShell & RoboCopy)
 **Concept:** Multi-threaded distribution of GIS deliverables across complex, national-scale directory structures.
 > [!NOTE]
 > An IT-focused utility that uses parallel thread orchestration (RoboCopy /MT) to manage massive file migrations while maintaining strict "SHAPE/OTA/Layer" hierarchical integrity.
+
 <details>
 <summary>📂 Προβολή Κώδικα: COPY_in_STRUCTURE.ps1 (PowerShell)</summary>
 
@@ -396,7 +404,8 @@ $Tasks | ForEach-Object -ThrottleLimit $MaxParallel -Parallel {
 ```
 
 </details>
-*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to code's page[Snippet](repository/COPY_in_STRUCTURE.ps1)**
+
+*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to [Snippet](repository/COPY_in_STRUCTURE.ps1)**
 
 ### 6. SHP_VERIFIER.py → Thorough Final Step Validation of Data before Deliverance to Contracting Authority
 **Concept:** Ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
