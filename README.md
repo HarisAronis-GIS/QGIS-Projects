@@ -203,7 +203,56 @@ qgs.exitQgis()
 
 </details>
 
-*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to [Snippet](repository/QGIS_Multiprocessor_Audit.py)**
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: QGIS_Multiprocessor_Audit.py</summary>
+
+```readme
+# ChkGeom.py | Technical Documentation
+
+## 🎯 Objective
+This script is a high-performance geometry validation and repair engine designed for large-scale GIS projects. It automates the detection of topological errors (e.g., self-intersections, null geometries), generates georeferenced error reports, and performs batch repairs to ensure data compliance with National Cadastre standards.
+
+## 🛠 Core Functionalities
+- **Geometry Audit:** Identifies invalid geometries across multiple datasets simultaneously.
+- **Georeferenced Reporting:** Exports detailed error logs, including Feature IDs (FID), Municipality codes (OTA), and spatial location (KAEK or X/Y coordinates).
+- **Automated Repair:** Provides a batch-repair workflow to rectify identified geometry violations.
+- **Missing PRJ Restoration:** Automatically generates GGRS87 (.prj) files if missing, ensuring coordinate system consistency during the audit.
+- **Empty Dataset Reporting:** Identifies and lists empty Shapefiles within the project structure for administrative oversight.
+
+## ⚙️ Initial Configuration (Setup)
+- `base_path`: Target directory containing the hierarchical folder structure of the project.
+- `output_folder`: Destination for the consolidated error reports.
+- `groups_dict`: Mapping of Municipality (OTA) codes to specific Basemaps and Subcontractor Offices to facilitate targeted data correction.
+- `prj_content`: Standardized GGRS87 (EPSG:2100) spatial reference string for automated .prj file generation.
+
+## ⚙️ Methodology & Workflow
+
+### 1. Parallel Processing Architecture
+- To optimize performance for thousands of files, the script utilizes **multi-core processing (6 parallel threads)**.
+- Workload is distributed across processes to verify data existence and schema integrity simultaneously.
+
+### 2. Geometry Validation Engine
+- Leverages the `arcpy.CheckGeometry_management` command within each parallel process.
+- For every detected error, the script generates a temporary enriched table (t_xxx.dbf) that captures the **KAEK** (Cadastral Code) or the **Centroid Coordinates** (X,Y) of the problematic feature.
+- **Spatial Referencing:** For non-cadastral layers (e.g., FBOUND, ROADS), the script uses the `SHAPE@XY` token. For linear features, it calculates the Extent Centroid to provide a reliable zoom-to target.
+
+### 3. Reporting & Consolidation
+- Merges individual process results into a single, comprehensive DBF report: `GEOMETRY_REPORT_YYYY-MM-DD_HHMMSS`.
+- Reports are enriched with metadata (Basemap ID, Subcontractor Office) for efficient task distribution.
+
+### 4. Automated Repair Workflow
+- Following the audit, the user is prompted to execute `Repair Geometry`.
+- Upon confirmation, the script performs a batch repair, followed by a **re-validation pass** to ensure all issues were successfully resolved.
+- A final repair log is generated for documentation and quality assurance.
+
+## 📤 Output & Results
+- **Consolidated Error Report:** A georeferenced .dbf file for easy navigation to problematic features in QGIS/ArcMap.
+- **Sanitized Spatial Data:** Fixed Shapefiles with validated topology.
+- **Empty File Summary:** On-screen report for quick identification of datasets without features.
+```
+</details>
+
+*   **Go to [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to [Snippet](repository/QGIS_Multiprocessor_Audit.py)** page.
 
 ### 2. PymuPDF_corrections.py → Cartographic Patching & PDF Stream Manipulation
 **Concept:** Post-processing exported map layouts to avoid time-consuming re-rendering/re-plotting.
@@ -252,7 +301,32 @@ patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
 
 </details>
 
-*   **View [Documentation](repository/PymuPDF_corrections_README.md) or go to [Snippet](repository/PymuPDF_corrections.py)**
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: PymuPDF_corrections.py</summary>
+
+```readme
+# PymuPDF_corrections.py | Technical Documentation
+
+## 🎯 Objective
+Post-processing of exported PDF map layouts to apply branding updates and text corrections without re-rendering from the GIS environment.
+
+## 🛠 Tech Stack
+- **Python 3.12**
+- **PyMuPDF (fitz)**: For high-speed PDF stream manipulation.
+- **OS**: For batch directory traversal.
+
+## ⚙️ Logic & Workflow
+1. **Targeting:** Iterates through hundreds of Municipality (OTA) folders to find PDF layouts.
+2. **Cleaning:** Uses coordinate-based "white-out" rectangles to redact old logos or misspelled text.
+3. **Patching:** Directly injects binary image streams (PNG logos) and new text blocks into the PDF object stream.
+4. **Validation:** Implements sub-point offsets to mask vector line artifacts often left by PDF rendering engines.
+
+## 🚀 Impact
+Saved approximately 3 working days of re-plotting for a project involving over 1,000 A0-sized maps.
+```
+</details>
+
+*   **Go to [Documentation](repository/PymuPDF_corrections_README.md) or go to [Snippet](repository/PymuPDF_corrections.py)** page.
 
 ### 3. BatchExportPoints.lsp → CAD-to-GIS Data Bridge (AutoLISP & ObjectDBX)
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
@@ -296,7 +370,32 @@ patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
 
 </details>
 
-*   **View [Documentation](repository/BatchExportPoints_README.md) or go to [Snippet](repository/BatchExportPoints.lsp)**
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: BatchExportPoints.lsp</summary>
+
+```readme
+# BatchExportPoints.lsp | Technical Documentation
+
+## 🎯 Objective
+Automated extraction of survey (tachymetric) points from multiple DWG files into a standardized GIS-ready CSV format.
+
+## 🛠 Tech Stack
+- **AutoLISP / Visual LISP**
+- **ObjectDBX**: To process closed DWG files without the overhead of the graphical interface.
+- **Python**: For secondary data splitting and integrity reporting.
+
+## ⚙️ Logic & Workflow
+1. **Extraction (LISP):** Scans a directory for DWGs. Using ObjectDBX, it identifies point entities on specific layers or block insertions by name.
+2. **Deduplication:** Filters unique coordinates and exports them to `all_points.csv`.
+3. **Refining (Python):** `SplitPoints.py` parses the CSV and categorizes data into schema-compliant Shapefile structures.
+4. **Validation:** `Check_n_Report.py` generates a final report on data consistency before GIS ingestion.
+
+## 🚀 Impact
+Streamlined the CAD-to-GIS pipeline for massive topographic datasets, ensuring zero coordinate loss during migration.
+```
+</details>
+
+*   **Go to [Documentation](repository/BatchExportPoints_README.md) or go to [Snippet](repository/BatchExportPoints.lsp)** page.
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
@@ -358,7 +457,31 @@ def refactor_project_labels(project_path, rules_config):
 
 </details>
 
-*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) or go to [Snippet](repository/QGZ_Styling_Engine.py)**
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: QGZ_Styling_Engine.py</summary>
+
+```readme
+# QGZ_Styling_Engine.py | Technical Documentation
+
+## 🎯 Objective
+Massive refactoring of QGIS Project files (.qgz) to enforce cartographic styling and resolve font-persistence bugs.
+
+## 🛠 Tech Stack
+- **Python 3.12**
+- **PyQGIS API**: For interacting with the QGIS labeling and styling engine.
+
+## ⚙️ Logic & Workflow
+1. **Persistence Fix:** Addresses a known QGIS issue where font styles (Bold/Italics) revert to "Regular" in complex rule-based setups. 
+2. **Data-Defined Overrides:** Injects Python expressions into the `QgsPalLayerSettings` to force font styles at runtime.
+3. **Spatial Predicate Injection:** Automatically updates filters with `overlay_within` logic to ensure labels remain within administrative boundaries.
+4. **Batch Processing:** Reads, modifies, and re-saves hundreds of project files in a single execution.
+
+## 🚀 Impact
+Ensured 100% compliance with national cartographic specifications across thousands of map annotations.
+```
+</details>
+
+*   **Go to [Documentation](repository/QGZ_Styling_Engine_README.md) or go to [Snippet](repository/QGZ_Styling_Engine.py)** page.
 
 ### 5. Intelligent Parallel File Deployment (PowerShell & RoboCopy)
 **Concept:** Multi-threaded distribution of GIS deliverables across complex, national-scale directory structures.
@@ -405,7 +528,31 @@ $Tasks | ForEach-Object -ThrottleLimit $MaxParallel -Parallel {
 
 </details>
 
-*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to [Snippet](repository/COPY_in_STRUCTURE.ps1)**
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: COPY_in_STRUCTURE.ps1</summary>
+
+```readme
+# COPY_in_STRUCTURE.ps1 | Technical Documentation
+
+## 🎯 Objective
+High-speed, multi-threaded distribution of GIS deliverables while maintaining strict hierarchical folder structures.
+
+## 🛠 Tech Stack
+- **PowerShell**
+- **RoboCopy**: Used as the underlying engine for robust, fast file copying.
+
+## ⚙️ Logic & Workflow
+1. **Orchestration:** Uses PowerShell to build a dynamic task list based on OTA codes (with wildcard support).
+2. **Parallelism:** Implements a `ThrottleLimit` of 6 parallel processes, each running 8 RoboCopy threads (48 threads total).
+3. **Safety Check:** Performs a size estimation and requests user confirmation before saturating network bandwidth.
+4. **Integrity:** Mirrors the source directory structure (`SHAPE\OTA\LAYER`) precisely to match National Registry requirements.
+
+## 🚀 Impact
+Optimized office-to-server data migration, reducing transfer times for large datasets by over 70%.
+```
+</details>
+
+*   **Go to [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to [Snippet](repository/COPY_in_STRUCTURE.ps1)** page.
 
 ### 6. SHP_VERIFIER.py → Thorough Final Step Validation of Data before Deliverance to Contracting Authority
 **Concept:** Ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
@@ -413,7 +560,74 @@ $Tasks | ForEach-Object -ThrottleLimit $MaxParallel -Parallel {
 > If it's report is clear, you can finally rest, after weeks or months of hard work. 
 > If it finds "FIXABLE" errors, with a press of a button it rectifies them. 
 > If it flags the errors as "MANUAL", it gives you an analytical report on your desktop to fix them without searching and knowing what to do.
-*   **[View Documentation](repository/SHP_VERIFIER_README.md)**
+
+<details>
+<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: SHP_VERIFIER.py</summary>
+
+```readme
+# SHP_VERIFIER.py | Technical Documentation
+
+## 🎯 Objective
+This script is a comprehensive validation engine designed to audit the **SHAPE** delivery folder for large-scale Cadastre GIS projects. It ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
+
+## 🛠 Core Functionalities
+- **Structure Audit:** Verifies the hierarchical integrity of the delivery folder, identifying and removing redundant files or unauthorized subdirectories.
+- **Schema Validation & Repair:** Automates the verification of Shapefile headers, ensuring field names, data types, and lengths align with project standards.
+- **Attribute Normalization:** Performs automated correction of field values based on pre-defined business rules (e.g., handling missing or incorrect address strings).
+- **Manual Error Reporting:** Identifies and logs loading errors or complex inconsistencies that require manual intervention by the GIS team.
+- **Placeholder Generation:** Automatically generates empty, schema-compliant Shapefiles for mandatory subfolders where data is missing.
+
+## ⚙️ Initial Configuration (Setup)
+- `base_path`: Target directory (e.g., Desktop/SHAPE) containing the source spatial data.
+- `master_template_path`: Directory containing "gold-standard" empty Shapefiles (pre-verified for type/length compliance) used as templates for repairs and generation.
+- `log_file_path`: Output destination and filename for the validation report.
+- `ANONYMOS_SET`: List of invalid or null `PST.ADDRESS` entries to be normalized as "ΑΝΩΝΥΜΟΣ" (Anonymous).
+- `TYFLO_SET`: List of erroneous `PST.ADDRESS` entries to be normalized as "ΤΥΦΛΟ" (Blind/Dead-end).
+- `groups_dict`: Mapping of Municipality (OTA) codes to specific Basemaps and Subcontractor Offices to streamline the manual correction workflow.
+
+## 📤 Output & Results
+- **Verified Delivery Package:** A sanitized and compliant SHAPE folder ready for submission.
+- **Validation Log:** A detailed report highlighting all automated corrections and a prioritized list of issues requiring manual resolution.
+
+## ⚙️ Methodology & Workflow
+
+### 1. Initialization
+- Configures environment encoding (Windows-1253 for Greek characters).
+- Initializes dual-logging system (Concurrent output to Console and Log File).
+- Performs dependency checks for `base_path` and `master_templates` existence.
+
+### 2. Schema Template Loading
+- Parses "ideal" Shapefiles from the `master_template_path`.
+- Maps the expected schema (field names, types, lengths) into a memory-resident dictionary (`masters`) for high-speed comparison.
+
+### 3. Execution Scope
+- Supports selective processing: Users can target specific Municipalities (OTA) using prefix filters (e.g., "41" for Viotia) or perform a full-scale scan of the entire `base_path`.
+
+### 4. Scanning Phase
+- **Data Integrity Check:** Evaluates attribute values against complex business logic. Issues are flagged as:
+    - `[MANUAL]`: Critical inconsistencies requiring human intervention.
+    - `[FIXABLE]`: Systematic errors that can be programmatically resolved.
+- **Schema Validation:** Compares active Shapefile headers against the template. Identifies type mismatches, incorrect lengths, missing mandatory fields, or redundant attributes.
+- **Heuristic Filtering:** Includes conditional logic to ignore minor schema discrepancies that do not trigger server-side loading errors, focusing only on mission-critical violations.
+
+### 5. Reporting & Automated Rectification
+- **Categorized Reporting:** Generates a summary log grouped by Subcontractor/Basemap (via `groups_dict`), separating fixable and manual issues.
+- **The SHP_RECTIFIER Engine:** Upon user confirmation (`YES`), the script executes automated repairs:
+    - **Schema Correction:** Uses a "Temporary Field" migration technique (Add TMP field -> Data Migration -> Drop Old -> Recreate Correct -> Restore Data) to safely change field types/lengths without data loss.
+    - **Attribute Fixing:** Executes `CalculateField` operations with Python logic to normalize fields like `ORI_CODE`, `ADDRESS`, and `NUM`.
+    - **Redundant Field Stripping:** Removes non-compliant fields.
+
+### 6. Missing Layer Recovery
+- Identifies mandatory layers missing from OTA folders.
+- Provides a prompt for the user to bulk-generate schema-compliant empty Shapefiles from the master templates (selective or global generation).
+
+### 7. Completion
+- Logs total execution time.
+- Triggers an audible alert (Beep) and remains active for log review before termination.
+```
+</details>
+
+*   **[Go to Documentation](repository/SHP_VERIFIER_README.md)** page.
 
 ---
 
