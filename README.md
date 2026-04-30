@@ -4,14 +4,14 @@ Samples of maps made in QGIS/ArcGIS and scripts (Python/AutoLISP/PS1) for automa
 ---
 
 ## 👋 About Me
-I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the intersection of **Cartography, GIS, and Urban Planning**. Currently serving as the **Head of the GIS Department at CHOROMETRIA**, leadimg large-scale projects for the **Hellenic National Land Registry** and complex Local Urban Plan studies. My approach combines veteran field knowledge with modern Python automation and Geomatics strategy. [This is **My Professional Philosophy**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-professional-philosophy) and my [**Contact info**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-contact-info).
+I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the intersection of **Cartography, GIS, and Urban Planning**. Currently serving as Head of the GIS Department at CHOROMETRIA, I lead large-scale projects for the *Hellenic National Land Registry* and complex Local Urban Plan studies for several Public Contract Authorities. My approach combines veteran field knowledge with modern Python automation and Geomatics strategy. [This is **My Professional Philosophy**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-professional-philosophy) and my [**Contact info**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-contact-info).
 
 📄 [Download **my Resume** (PDF)](./ARONIS%20resume.pdf)
 
 ---
 
 ## 🛠 Tech Stack & Expertise
-*   **Domain Expertise:** National Cadastral Surveys, Strategic Urban Planning, Settlement Delimitation.
+*   **Domain Expertise:** National Cadastral Surveys, Strategic Urban Planning, Settlement Delimitation studies.
 *   **GIS Software:** QGIS (Advanced/PyQGIS), ArcGIS Pro/Desktop, AutoCAD Map 3D.
 *   **Automation & Data:** Python for GIS data management and map creation, SQL for Spatial Database Management, AutoLISP & SCR scripts for CAD, PowerShell (ps1 scripts) for acceleration of IT processes.
 
