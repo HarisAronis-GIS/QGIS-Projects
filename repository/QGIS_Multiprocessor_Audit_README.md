@@ -1,4 +1,4 @@
-# ChkGeom.py | Technical Documentation
+# QGIS_Multiprocessor_Audit | Technical Documentation
 
 ## 🎯 Objective
 This script is a high-performance geometry validation and repair engine designed for large-scale GIS projects. It automates the detection of topological errors (e.g., self-intersections, null geometries), generates georeferenced error reports, and performs batch repairs to ensure data compliance with National Cadastre standards.
