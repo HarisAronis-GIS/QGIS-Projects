@@ -118,7 +118,8 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 ---
 
 ## 💻 Code Highlights & Technical Innovation
-*Selected snippets demonstrating advanced automation and surgical problem-solving.*
+**Selected snippets demonstrating advanced automation and surgical problem-solving.** 
+*(...and as the term "snippet" suggests, it is a changed and very short piece of the real source code, just to demostrate the **key-point** of the full script)*
 
 ### 1. QGIS_Multiprocessor_Audit.py → High-Performance Spatial Audit (PyQGIS & Multiprocessing)
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
@@ -138,7 +139,7 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
 > [!NOTE]
 > Utilizing ObjectDBX to read and extract coordinates from AutoCAD blocks and entities without the overhead of opening the graphical editor, ensuring a seamless data pipeline to GIS formats.
-*   **View [Documentation](repository/BatchExportPoints_README.md) & check [Snippet](repository/BatchExportPoints_README.lsp)**
+*   **View [Documentation](repository/BatchExportPoints_README.md) & check [Snippet](repository/BatchExportPoints.lsp)**
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
