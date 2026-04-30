@@ -22,7 +22,7 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 > [!CAUTION]
 > ## ⚖️ Legal Disclaimer
 > The maps and spatial data presented in this portfolio were developed by me in a professional capacity during my tenure at CHOROMETRIA Consulting Engineers. 
-> *   **Ownership:** The final deliverables and the intellectual property of the data belong to the **Hellenic Public Sector** (Hellenic Land Registry / **Ministry of Digital Governance**). 
+> *   **Ownership:** The final deliverables and the intellectual property of the data belong to the **Hellenic Public Sector** (*Ministry of Digital Governance / Hellenic Land Registry, Ministry of Environment & Energy, etc.*). 
 > *   **Purpose:** These files are shared for **demonstration of professional competence, cartographic quality, and technical GIS skills only**. 
 > Unauthorized reproduction or commercial use is strictly prohibited.
 > 
