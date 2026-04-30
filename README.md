@@ -127,7 +127,7 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 > This engine uses Python 3.12 and the PyQGIS API to bypass the Global Interpreter Lock (GIL), distributing spatial tasks across 6-8 CPU cores, reducing processing time from hours to minutes.
 
 <details>
-<summary>📂 Προβολή Κώδικα: QGIS_Multiprocessor_Audit.py (Python)</summary>
+<summary>📂 Click to unfold code: QGIS_Multiprocessor_Audit.py (Python)</summary>
 
 ```python
 import os
@@ -204,7 +204,7 @@ qgs.exitQgis()
 </details>
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: QGIS_Multiprocessor_Audit.py</summary>
+<summary>📘 Click to unfold Technical Documentation: QGIS_Multiprocessor_Audit.py</summary>
 
 ```readme
 # ChkGeom.py | Technical Documentation
@@ -262,7 +262,7 @@ This script is a high-performance geometry validation and repair engine designed
 > This script allowed for instantaneous corrections directly on the PDF files, saving approximately 2-3 working days of re-plotting.
 
 <details>
-<summary>📂 Προβολή Κώδικα: PymuPDF_corrections.py (Python)</summary>
+<summary>📂 Click to unfold code: PymuPDF_corrections.py (Python)</summary>
 
 ```python
 import fitz  # PyMuPDF library
@@ -302,7 +302,7 @@ patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
 </details>
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: PymuPDF_corrections.py</summary>
+<summary>📘 Click to unfold Technical Documentation: PymuPDF_corrections.py</summary>
 
 ```readme
 # PymuPDF_corrections.py | Technical Documentation
@@ -334,7 +334,7 @@ Saved approximately 3 working days of re-plotting for a project involving over 1
 > Utilizing ObjectDBX to read and extract coordinates from AutoCAD blocks and entities without the overhead of opening the graphical editor, ensuring a seamless data pipeline to GIS formats.
 
 <details>
-<summary>📂 Προβολή Κώδικα: BatchExportPoints.lsp (AutoLISP)</summary>
+<summary>📂 Click to unfold code: BatchExportPoints.lsp (AutoLISP)</summary>
 
 ```lisp
 ;; AutoLISP snippet using ObjectDBX for high-speed data extraction
@@ -371,7 +371,7 @@ Saved approximately 3 working days of re-plotting for a project involving over 1
 </details>
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: BatchExportPoints.lsp</summary>
+<summary>📘 Click to unfold Technical Documentation: BatchExportPoints.lsp</summary>
 
 ```readme
 # BatchExportPoints.lsp | Technical Documentation
@@ -404,7 +404,7 @@ Streamlined the CAD-to-GIS pipeline for massive topographic datasets, ensuring z
 > By implementing a data-defined override engine, I ensured that thousands of map annotations remained compliant with national cartographic specifications.
 
 <details>
-<summary>📂 Προβολή Κώδικα: QGZ_Styling_Engine.py (Python)</summary>
+<summary>📂 Click to unfold code: QGZ_Styling_Engine.py (Python)</summary>
 
 ```python
 import os
@@ -458,7 +458,7 @@ def refactor_project_labels(project_path, rules_config):
 </details>
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: QGZ_Styling_Engine.py</summary>
+<summary>📘 Click to unfold Technical Documentation: QGZ_Styling_Engine.py</summary>
 
 ```readme
 # QGZ_Styling_Engine.py | Technical Documentation
@@ -489,7 +489,7 @@ Ensured 100% compliance with national cartographic specifications across thousan
 > An IT-focused utility that uses parallel thread orchestration (RoboCopy /MT) to manage massive file migrations while maintaining strict "SHAPE/OTA/Layer" hierarchical integrity.
 
 <details>
-<summary>📂 Προβολή Κώδικα: COPY_in_STRUCTURE.ps1 (PowerShell)</summary>
+<summary>📂 Click to unfold code: COPY_in_STRUCTURE.ps1 (PowerShell)</summary>
 
 ```powershell
 # PowerShell snippet leveraging RoboCopy with parallel thread orchestration
@@ -529,7 +529,7 @@ $Tasks | ForEach-Object -ThrottleLimit $MaxParallel -Parallel {
 </details>
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: COPY_in_STRUCTURE.ps1</summary>
+<summary>📘 Click to unfold Technical Documentation: COPY_in_STRUCTURE.ps1</summary>
 
 ```readme
 # COPY_in_STRUCTURE.ps1 | Technical Documentation
@@ -562,7 +562,7 @@ Optimized office-to-server data migration, reducing transfer times for large dat
 > If it flags the errors as "MANUAL", it gives you an analytical report on your desktop to fix them without searching and knowing what to do.
 
 <details>
-<summary>📘 Προβολή Τεχνικής Τεκμηρίωσης: SHP_VERIFIER.py</summary>
+<summary>📘 Click to unfold Technical Documentation: SHP_VERIFIER.py</summary>
 
 ```readme
 # SHP_VERIFIER.py | Technical Documentation
