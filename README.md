@@ -77,9 +77,9 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 ---
 
 ## 💻 Code Highlights & Technical Innovation
-**Selected snippets demonstrating advanced automation and surgical problem-solving.** 
-*(...and as the term "snippet" suggests, it is a changed and very short piece of the real source code, just to demostrate the **key-point** of the full script)*
-Check below the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio)
+**Selected snippets demonstrating advanced automation and surgical problem-solving** 
+
+*(...and as the term "snippet" suggests, it is a changed and very short piece of the real source code, just to demostrate the **key-point** of the full script - don't forget to check the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio) after this section)*
 
 ### 1. QGIS_Multiprocessor_Audit.py → High-Performance Spatial Audit (PyQGIS & Multiprocessing)
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
