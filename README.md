@@ -170,7 +170,7 @@ And above all, **I LOVE MAPS!!!**
 
 ---
 
-## 📫 Contact & Professional Links (available only for remote collborations, up to 
+## 📫 Contact & Professional Links (I'm available only for remote collborations)
 *   **Location:** Athens, Greece
 *   **Email:** harisaronis[at]gmail.com
 *   **LinkedIn:** [https://www.linkedin.com/in/haris-aronis-0720b68]
