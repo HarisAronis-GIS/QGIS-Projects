@@ -1,5 +1,5 @@
-# QGIS-Projects Portfolio | Geomatics & Spatial Planning Specialist
-Maps made in QGIS and Python scripts for automating GIS workflows.
+# GIS-Projects Portfolio
+Samples of maps made in QGIS/ArcGIS and scripts (Python/AutoLISP/PS1) for automating GIS workflows.
 
 ---
 
