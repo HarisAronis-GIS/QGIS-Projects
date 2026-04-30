@@ -125,7 +125,83 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
 > [!TIP]
 > This engine uses Python 3.12 and the PyQGIS API to bypass the Global Interpreter Lock (GIL), distributing spatial tasks across 6-8 CPU cores, reducing processing time from hours to minutes.
-*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) & check [Snippet](repository/QGIS_Multiprocessor_Audit.py)**
+<details>
+<summary>📂 Προβολή Κώδικα: QGIS_Multiprocessor_Audit.py (Python)</summary>
+
+```python
+import os
+import time
+from multiprocessing import Pool
+from qgis.core import QgsApplication, QgsVectorLayer, QgsGeometry
+
+# Setup QGIS Path (Standard for Python 3.12 standalone scripts)
+QgsApplication.setPrefixPath("/usr", True)
+qgs = QgsApplication([], False)
+qgs.initQgis()
+
+def spatial_worker(task):
+    """
+    Independent worker process for geometry validation.
+    Runs in parallel to bypass Python's GIL and maximize CPU usage.
+    """
+    group_id, layer_name, ota_list, base_path = task
+    errors = []
+    
+    for ota in ota_list:
+        shp_path = os.path.join(base_path, ota, layer_name, f"{layer_name}.shp")
+        
+        if not os.path.exists(shp_path):
+            continue
+            
+        # Load layer in off-screen mode
+        layer = QgsVectorLayer(shp_path, layer_name, "ogr")
+        if not layer.isValid():
+            continue
+
+        # Iterate through features and validate geometry engine
+        for feature in layer.getFeatures():
+            geom = feature.geometry()
+            if not geom.isGeosvalid():
+                # Capture critical metadata for the error report
+                errors.append({
+                    'OTA': ota,
+                    'FID': feature.id(),
+                    'ERROR': geom.validateGeometry(),
+                    'GROUP': group_id
+                })
+    return errors
+
+if __name__ == '__main__':
+    # Configuration for a 6-core High-End Workstation
+    NUM_CORES = 6
+    BASE_PATH = "C:/GIS_DATA/SHAPE"
+    
+    # Task distribution logic (example slice)
+    tasks = [("GROUP_A", "PST", ["41001", "41002"], BASE_PATH),
+             ("GROUP_B", "PST", ["41003", "41004"], BASE_PATH)]
+
+    print(f"🚀 Initializing Parallel Audit on {NUM_CORES} cores...")
+    start_time = time.time()
+
+    with Pool(processes=NUM_CORES) as pool:
+        # imap_unordered for maximum memory efficiency
+        results = pool.imap_unordered(spatial_worker, tasks)
+        
+        final_report = []
+        for i, res in enumerate(results):
+            final_report.extend(res)
+            print(f"✅ Processed task {i+1}/{len(tasks)}", end="\r")
+
+    duration = time.time() - start_time
+    print(f"\n\n✨ Audit Complete. Total Errors: {len(final_report)}")
+    print(f"⏱ Execution Time: {duration:.2f} seconds")
+
+# Clean up QGIS resources
+qgs.exitQgis()
+```
+
+</details>
+*   **View [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to code's page[Snippet](repository/QGIS_Multiprocessor_Audit.py)**
 
 ### 2. PymuPDF_corrections.py → Cartographic Patching & PDF Stream Manipulation
 **Concept:** Post-processing exported map layouts to avoid time-consuming re-rendering/re-plotting.
@@ -133,26 +209,194 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 > A "surgical" approach to map corrections. Instead of re-rendering layouts, this script intervenes directly in the PDF's binary stream to update logos, fix typos, and adjust font styles at the sub-point level.
 > This utility was developed to solve a critical bottleneck in the map production pipeline, when we realised that the logo of Contracting Authority had recenty changed and some minor but annoying label errors were detected in hundreds of already-exported A0 maps...
 > This script allowed for instantaneous corrections directly on the PDF files, saving approximately 2-3 working days of re-plotting.
-*   **View [Documentation](repository/PymuPDF_corrections_README.md) & check [Snippet](repository/PymuPDF_corrections.py)**
+<details>
+<summary>📂 Προβολή Κώδικα: PymuPDF_corrections.py (Python)</summary>
+
+```python
+import fitz  # PyMuPDF library
+
+def patch_map_metadata(pdf_path, output_path, corrections):
+    """
+    Directly updates text objects within an exported PDF (titles, logos, labels).
+    Bypasses the need to re-render complex GIS layouts.
+    """
+    doc = fitz.open(pdf_path)
+    
+    for page in doc:
+        for old_text, new_text in corrections:
+            # Locate the coordinates of the target text
+            text_instances = page.search_for(old_text)
+            
+            for inst in text_instances:
+                # Redact the old content (white-out)
+                page.add_redact_annotation(inst, fill=(1, 1, 1))
+                page.apply_redactions()
+                
+                # Insert the corrected text at the exact same location
+                # Ensuring font-consistency and spatial alignment
+                page.insert_text(inst.tl, new_text, 
+                                 fontname="helv", 
+                                 fontsize=11, 
+                                 color=(0, 0, 0))
+                                 
+    doc.save(output_path, garbage=4, deflate=True)
+    doc.close()
+
+# Example Usage: Batch updating misspelled Municipality names in map titles
+corrections = [("MUNICIPALITY OF AGIALEIA", "MUNICIPALITY OF AIGIALEIA")]
+patch_map_metadata("Map_A0_v1.pdf", "Map_A0_final.pdf", corrections)
+```
+
+</details>
+
+*   **View [Documentation](repository/PymuPDF_corrections_README.md) or go to code's page[Snippet](repository/PymuPDF_corrections.py)**
 
 ### 3. BatchExportPoints.lsp → CAD-to-GIS Data Bridge (AutoLISP & ObjectDBX)
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
 > [!NOTE]
 > Utilizing ObjectDBX to read and extract coordinates from AutoCAD blocks and entities without the overhead of opening the graphical editor, ensuring a seamless data pipeline to GIS formats.
-*   **View [Documentation](repository/BatchExportPoints_README.md) & check [Snippet](repository/BatchExportPoints.lsp)**
+<details>
+<summary>📂 Προβολή Κώδικα: BatchExportPoints.lsp (AutoLISP)</summary>
+
+```lisp
+;; AutoLISP snippet using ObjectDBX for high-speed data extraction
+;; Processes closed DWG files to extract coordinates from Blocks and Points
+(defun c:BatchExportPoints (/ dbx addr pt)
+  (vl-load-com)
+  (setq baseDir "D:\\PROJECT_DATA\\")
+  (setq TARGET_LAYER "TOPO_SURVEY_POINTS")
+  (setq TARGET_BLOCK "SURVEY_NODE")
+
+  ;; Initialize ObjectDBX to read DWGs without opening them in the editor
+  (setq dbx (vlax-create-object 
+              (strcat "ObjectDBX.AxDbDocument." (substr (getvar "ACADVER") 1 2))))
+
+  (foreach dwg (vl-directory-files baseDir "*.dwg" 1)
+    (vla-open dbx (strcat baseDir dwg))
+    (vlax-for block (vla-get-blocks dbx)
+      (vlax-for obj block
+        ;; Extract from Blocks (Insertion Points) or Point Entities (Coordinates)
+        (if (or (and (= (vla-get-ObjectName obj) "AcDbBlockReference")
+                     (= (strcase (vla-get-Name obj)) (strcase TARGET_BLOCK)))
+                (and (= (vla-get-ObjectName obj) "AcDbPoint")
+                     (= (strcase (vla-get-Layer obj)) (strcase TARGET_LAYER))))
+            (setq pt (vlax-safearray->list (vlax-variant-value (vla-get-InsertionPoint obj))))
+        )
+        ;; Logic for uniqueness check and CSV logging follows...
+      )
+    )
+  )
+  (vlax-release-object dbx)
+)
+```
+
+</details>
+*   **View [Documentation](repository/BatchExportPoints_README.md) or go to code's page[Snippet](repository/BatchExportPoints.lsp)**
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
 > [!IMPORTANT]
 > This script was critical for production, as it addressed a persistent styling issue where font styles (Bold/Italics) were not properly saved in QGIS projects. 
 > By implementing a data-defined override engine, I ensured that thousands of map annotations remained compliant with national cartographic specifications.
-*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) & check [Snippet](repository/QGZ_Styling_Engine.py)**
+<details>
+<summary>📂 Προβολή Κώδικα: QGZ_Styling_Engine.py (Python)</summary>
+
+```python
+import os
+from qgis.core import QgsProject, QgsRuleBasedLabeling, QgsPalLayerSettings, QgsProperty
+
+def refactor_project_labels(project_path, rules_config):
+    """
+    Automates font style overrides and spatial filters for labeling.
+    Solves persistence issues where QGIS fails to retain Bold/Italic styles 
+    in complex rule-based setups.
+    """
+    project = QgsProject.instance()
+    project.read(project_path)
+
+    for l_name in ['POI_ANNOT_1', 'POI_ANNOT_5']:
+        layers = project.mapLayersByName(l_name)
+        for layer in layers:
+            labeling = layer.labeling()
+            if not isinstance(labeling, QgsRuleBasedLabeling): continue
+            
+            root_rule = labeling.rootRule()
+            for rule in root_rule.children():
+                current_filter = rule.filterExpression()
+                
+                for pname_val, config in rules_config.items():
+                    if f"\"PNAME\" = {pname_val}" in current_filter:
+                        # 1. Inject Spatial Predicate (ensure label is within boundary)
+                        new_filter = f"\"PNAME\" = {pname_val}"
+                        if config["within"]:
+                            new_filter += " AND overlay_within('ASTOTA')"
+                        rule.setFilterExpression(new_filter)
+                        
+                        # 2. Force Font Style via Data Defined Overrides
+                        settings = rule.settings()
+                        style_val = config["style"]
+                        settings.dataDefinedProperties().setProperty(
+                            QgsPalLayerSettings.FontStyle, 
+                            QgsProperty.fromExpression(f"'{style_val}'")
+                        )
+                        
+                        # 3. Optimization: Force visibility even on overlaps
+                        settings.showAllLabels = True 
+                        rule.setSettings(settings)
+            
+            layer.setLabeling(labeling)
+    
+    project.write()
+    project.clear()
+```
+
+</details>
+*   **View [Documentation](repository/QGZ_Styling_Engine_README.md) or go to code's page[Snippet](repository/QGZ_Styling_Engine.py)**
 
 ### 5. Intelligent Parallel File Deployment (PowerShell & RoboCopy)
 **Concept:** Multi-threaded distribution of GIS deliverables across complex, national-scale directory structures.
 > [!NOTE]
 > An IT-focused utility that uses parallel thread orchestration (RoboCopy /MT) to manage massive file migrations while maintaining strict "SHAPE/OTA/Layer" hierarchical integrity.
-*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) & check [Snippet](repository/COPY_in_STRUCTURE.ps1)**
+<details>
+<summary>📂 Προβολή Κώδικα: COPY_in_STRUCTURE.ps1 (PowerShell)</summary>
+
+```powershell
+# PowerShell snippet leveraging RoboCopy with parallel thread orchestration
+# Designed for ultra-fast migration of massive GIS datasets (SHAPE/OTA/Layer)
+
+$Source = "K:\PROJECT_SERVER\SHAPE"
+$Dest   = "C:\LOCAL_STAGING\SHAPE"
+$MaxParallel = 6  # Number of simultaneous folder operations
+$RoboThreads = 8  # Parallel threads per RoboCopy process (total 48 threads)
+
+# Building a dynamic task list using PSCustomObject for traceability
+$Tasks = New-Object System.Collections.Generic.List[PSCustomObject]
+foreach ($code in $OTA_Codes) {
+    $srcPath = Join-Path $Source $code
+    if (Test-Path $srcPath) {
+        $Tasks.Add([PSCustomObject]@{ 
+            Src = $srcPath; 
+            Dst = Join-Path $Dest $code 
+        })
+    }
+}
+
+# Executing Parallel Copy using the ForEach-Object -Parallel throttle limit
+# Optimized for network environments (low latency, high throughput)
+$Tasks | ForEach-Object -ThrottleLimit $MaxParallel -Parallel {
+    $task = $_
+    $threads = $using:RoboThreads
+    if (Test-Path $task.Src) {
+        # Ensuring destination existence with -Force
+        New-Item -ItemType Directory -Path $task.Dst -Force | Out-Null
+        # RoboCopy with multi-threading (/MT) and silent logging for speed
+        robocopy $task.Src $task.Dst /E /MT:$threads /R:1 /W:1 /NFL /NDL /NJH /NJS | Out-Null
+    }
+}
+```
+
+</details>
+*   **View [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to code's page[Snippet](repository/COPY_in_STRUCTURE.ps1)**
 
 ### 6. SHP_VERIFIER.py → Thorough Final Step Validation of Data before Deliverance to Contracting Authority
 **Concept:** Ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
