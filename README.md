@@ -37,6 +37,7 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 *   **🔍 [View a Cadastral Map of 1:1000 Greek Grid - ISTHMIA, Corinth Canal (PDF)](https://drive.google.com/file/d/1LJJEnujoJsa3ag4IBz8Jmpfp4Ll-0HbJ/preview)** 
 *   **🔍 [View a Cadastral Map of 1:5000 Greek Grid - LOUTRAKI, Lake Vouliagmeni (PDF)](https://drive.google.com/file/d/1NG9zrH8K8PzLIfRBi9IwwWpP4_8rsBX4/preview)** 
 *   **🔍 [View a Cadastral Map of 1:5000 Greek Grid - LIDORIKI, Lake Mornos (PDF)](https://drive.google.com/file/d/1C6W1e8KiLPuoedPIBPhY4AygcXahG-aH/preview)** 
+*   **🔍 [View a Cadastral Extract of a Monastery Properties - Fokida, Amygdalia (PDF)](https://drive.google.com/file/d/1wqPIN_isdI4Uptse-u5fPuPlXdK4geF0/view?usp=drive_link)** 
 
 
 ### 2. Local Urban Plans & Spatial Analysis
@@ -68,7 +69,7 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 *   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 19' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1NJx8nQcnGc-ecBri6YpeAsUt7O-IhsV2/view?usp=drive_link)**
 
 #### 📍 AIGIALEIA (Settlement Delimitation)
-*   **🔍 [View 'Coordinate Registry (X,Y) GGRS87 of Proposed Settlement Boundaries' Booklet (plain version) (PDF)](https://drive.google.com/file/d/1_ze_a4Yzb7VKZ7I3qBemg43aH1Nn5q2F/preview)**
+*   **🔍 [View 'GGRS87 Coordinates Issue of the Settlement Delimitation Study (PDF booklet)](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/view?usp=drive_link)**
 *   **🔍 [View 'DELIMITATION OF "AKRATA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/16IwhdPa9DFG79DV5v5Z-AY7c-2b6HLMK/preview)**
 *   **🔍 [View 'DELIMITATION OF "KAMARES" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1WXNvza6gzYQ0nnQa-ILQ2z38Bk7ZJjKE/preview)**
 *   **🔍 [View 'DELIMITATION OF "NIKOLEIKA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1P3keHbKqXaWvY4EsPv_rMPsHYG3VDc61/preview)**
