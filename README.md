@@ -933,15 +933,15 @@ while preserving:
 The final `xy_table` layer stores:
 
 ```text
-Oik_Name
-G_Ord
-S_Ord
-L_Int
-Lbl
-X
-Y
-Is_H
-Line_Weight
+Oik_Name → defines in which Atlas page will display
+G_Ord → Group Order
+S_Ord → Subgroup Order
+L_Int → Lbl Order
+Lbl → Label (vertex number)
+X → X coordinate (GGRS87)
+Y → Y coordinate (GGRS87)
+Is_H → is Header?
+Line_Weight → 2 rows when is_H = 1, 1 row when is_H = 0
 ```
 
 Used directly inside QGIS Layout multi-frame tables.
@@ -971,15 +971,14 @@ Greek number formatting, e.g.:
 
 <br>
 
-- **Hierarchy, Topological Order, Page Manipulation:**
-	- Sorting is:
-    	- G_Ord → ascending
-    	- S_Ord → ascending
-    	- L_int → ascending
-	- ZONE HEADERS and ZONE VERTICES are the most interesting sections in XY_Table.py, as they define:
-    	- the header of every zone at the table by type / polygon number / area
-    	- the desired way of numbering and sorting of labels and coordinates
-
+**Hierarchy, Topological Order, Page Manipulation:**
+- Sorting is:
+   	- G_Ord → ascending
+   	- S_Ord → ascending
+   	- L_int → ascending
+- ZONE HEADERS and ZONE VERTICES are the most interesting sections in XY_Table.py, as they define:
+   	- the header of every zone at the table by type / polygon number / area
+   	- the desired way of numbering and sorting of labels and coordinates
 **ZONE HEADERS section code**
 <details>
 <summary>📂 Click to unfold python code</summary>
@@ -1042,8 +1041,6 @@ for key in sorted_zone_keys:
 ```
 
 </details>
-
-<br>
 
 **ZONE VERTICES section code**
 <details>
