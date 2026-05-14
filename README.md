@@ -1,12 +1,16 @@
 # GIS-Projects Portfolio
 Samples of maps made in QGIS/ArcGIS and scripts (Python/AutoLISP/PS1) for automating GIS workflows.
 
+<br>
+
 ---
 
 ## 👋 About Me
-I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the intersection of **Cartography, GIS, and Urban Planning**. Currently serving as Head of the GIS Department at CHOROMETRIA, I lead large-scale projects for the *Hellenic National Land Registry* and complex Local Urban Plan studies for several Public Contract Authorities. My approach combines veteran field knowledge with modern Python automation and Geomatics strategy. [This is **My Professional Philosophy**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-professional-philosophy) and my [**Contact info**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-contact-info).
+I am a *Rural & Surveying Engineer* graduate of NTUA, with 30 years of experience at the intersection of **Cartography, GIS, and Urban Planning**. Since 2014, serving as head of the GIS Department at CHOROMETRIA, I lead large-scale projects for the *Hellenic National Land Registry* and complex Local Urban Plan studies for several Public Contract Authorities. My approach combines **veteran field knowledge with modern Python automation and Geomatics strategy**. [This is **My Professional Philosophy**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-professional-philosophy) and my [**Contact info**](https://github.com/HarisAronis-GIS/QGIS-Projects/edit/main/README.md#-contact-info).
 
 📄 [Download **my Resume** (PDF)](./ARONIS%20resume.pdf)
+
+<br>
 
 ---
 
@@ -15,9 +19,11 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 *   **GIS Software:** QGIS (Advanced/PyQGIS), ArcGIS Pro/Desktop, AutoCAD Map 3D.
 *   **Automation & Data:** Python for GIS data management and map creation, SQL for Spatial Database Management, AutoLISP & SCR scripts for CAD, PowerShell (ps1 scripts) for acceleration of IT processes.
 
+<br>
+
 ---
 
-## 🗺 Featured Projects (Cadastre & Urban Planning)
+## 🗺 Featured Projects (Maps for Cadastre, Urban Planning & Settlement Delimitation studies)
 
 > [!CAUTION]
 > ## ⚖️ Legal Disclaimer
@@ -27,60 +33,88 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 > Unauthorized reproduction or commercial use is strictly prohibited.
 > 
 
----
+<br>
 
-### 1. National Land Registry (Major Scale Cadastral Surveys)
+### 1. Hellenic Land Registry (Major Scale Cadastral Surveys)
 **Context:** Leading GIS technical coordination for Hellenic Cadastre studies, including the Athens metropolitan area, Voiotia - Fokida Prefectures, Rethymno Crete, etc.
-*   **Key Tasks:** Large-scale spatial data management, Topology validation, Property boundary reconciliation.
-*   **Cartography:** High-precision map production for public display.
-*   **🔍 [View a Cadastral Map of 1:1000 Greek Grid - ATHENS, Acropolis area (PDF)](https://drive.google.com/file/d/1qJn4DWKkQyl6t5rX7Bf0NY3i_YER6kba/preview)** 
-*   **🔍 [View a Cadastral Map of 1:1000 Greek Grid - ISTHMIA, Corinth Canal (PDF)](https://drive.google.com/file/d/1LJJEnujoJsa3ag4IBz8Jmpfp4Ll-0HbJ/preview)** 
-*   **🔍 [View a Cadastral Map of 1:5000 Greek Grid - LOUTRAKI, Lake Vouliagmeni (PDF)](https://drive.google.com/file/d/1NG9zrH8K8PzLIfRBi9IwwWpP4_8rsBX4/preview)** 
-*   **🔍 [View a Cadastral Map of 1:5000 Greek Grid - LIDORIKI, Lake Mornos (PDF)](https://drive.google.com/file/d/1C6W1e8KiLPuoedPIBPhY4AygcXahG-aH/preview)** 
-*   **🔍 [View a Cadastral Extract of a Monastery Properties - Fokida, Amygdalia (PDF)](https://drive.google.com/file/d/1wqPIN_isdI4Uptse-u5fPuPlXdK4geF0/preview)** 
+* **Key Tasks:** Large-scale spatial data management, Topology validation, Property boundary reconciliation.
+* **Cartography:** High-precision map production for public display.
 
+**View Cadastral Map Sheets of the GGRS87 1:1000 grid:**
+*   **🔍 [ATHENS, Acropolis area](https://drive.google.com/file/d/1qJn4DWKkQyl6t5rX7Bf0NY3i_YER6kba/preview)** 
+*   **🔍 [ISTHMIA, Corinth Canal](https://drive.google.com/file/d/1LJJEnujoJsa3ag4IBz8Jmpfp4Ll-0HbJ/preview)** 
 
-### 2. Local Urban Plans & Spatial Analysis
+**View Cadastral Map Sheets of the GGRS87 1:5000 grid:**
+*   **🔍 [LOUTRAKI, Lake Vouliagmeni](https://drive.google.com/file/d/1NG9zrH8K8PzLIfRBi9IwwWpP4_8rsBX4/preview)** 
+*   **🔍 [LIDORIKI, Lake Mornos](https://drive.google.com/file/d/1C6W1e8KiLPuoedPIBPhY4AygcXahG-aH/preview)** 
+
+**View a Cadastral Extract:**
+*   **🔍 [Monastery Properties - Fokida, Amygdalia](https://drive.google.com/file/d/1wqPIN_isdI4Uptse-u5fPuPlXdK4geF0/preview)** 
+
+<br>
+
+### 2. Local Urban Plans & Settlement Delimitation
 **Context:** Development of Local Urban Plan and Settlement Delimitation studies.
 *   **Key Tasks:** Land use analysis, infrastructure mapping, and environmental constraint modeling.
 *   **Output:** Professional layouts with advanced symbology and cartographic integrity.
 
 #### 📍 ATHENS (Local Urban Plan)
-*   **🔍 [View 'BUILT ENVIRONMENT: BUILDING HEIGHTS - Distribution of Land Parcels based on Maximum Number of Floors, at Municipal Level' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1hdHbPut16mwaog5G15jp-lLXUOMSZlow/preview)**
-*   **🔍 [View 'Alternative Scenarios Diagram & Map of Statutory Boundaries (Municipal Units, Neighborhoods & Local Communities)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1WkyTlH6VZM0-tCOrzB6YIyVArw86OXmf/preview)**
-*   **🔍 [View 'PUBLIC REAL ESTATE - Ownership Distribution of Municipal (City of Athens) and State-Owned Assets, at Municipal Level' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1agmGQqyVES6svHz7BGVWfPqeNqW3BLr9/preview)**
-*   **🔍 [View 'FOREIGN OWNERSHIP (CHINA) - Distribution of Land Parcels owned by Residents or Entities based in China, at Municipal Level)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1o15jzjrsPy_rvaQIrOoQfTtnX68s62h4/preview)**
-*   **🔍 [View 'PLOT SIZES - Distribution of Land Parcels based on Cadastral Areas (Level: Municipal Districts 1, 2, 3, 7)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1GYnHmhzAzmzxCgLwxImoydbOz8n5l2f9/preview)**
-*   **🔍 [View 'COMMERCIAL LAND USE - Distribution of Land Parcels with Divided or Undivided Properties and Commercial Activities (Level: Municipal District 1)' Map - 1:10000 (PDF)](https://drive.google.com/file/d/1CDfOAaO4dsh1R37baieLd4kILJZgyGVI/preview)**
-*   **🔍 [View 'BASEMENT RESIDENCES - Distribution of Land Parcels with Divided Properties and Subterranean Residential Use (Level: Municipal District 1)' Map - 1:10000 (PDF)](https://drive.google.com/file/d/1e40BjA6_gUFRrpHMJBP0fEM_QJh4YUOD/preview)**
+**View 1:25000 Maps:**
+*   **🔍 ['BUILT ENVIRONMENT: BUILDING HEIGHTS - Distribution of Land Parcels based on Maximum Number of Floors, at Municipal Level'](https://drive.google.com/file/d/1hdHbPut16mwaog5G15jp-lLXUOMSZlow/preview)**
+*   **🔍 ['Alternative Scenarios Diagram & Map of Statutory Boundaries (Municipal Units, Neighborhoods & Local Communities)'](https://drive.google.com/file/d/1WkyTlH6VZM0-tCOrzB6YIyVArw86OXmf/preview)**
+*   **🔍 ['PUBLIC REAL ESTATE - Ownership Distribution of Municipal (City of Athens) and State-Owned Assets, at Municipal Level'](https://drive.google.com/file/d/1agmGQqyVES6svHz7BGVWfPqeNqW3BLr9/preview)**
+*   **🔍 ['FOREIGN OWNERSHIP (CHINA) - Distribution of Land Parcels owned by Residents or Entities based in China, at Municipal Level)'](https://drive.google.com/file/d/1o15jzjrsPy_rvaQIrOoQfTtnX68s62h4/preview)**
+*   **🔍 ['PLOT SIZES - Distribution of Land Parcels based on Cadastral Areas (Level: Municipal Districts 1, 2, 3, 7)'](https://drive.google.com/file/d/1GYnHmhzAzmzxCgLwxImoydbOz8n5l2f9/preview)**
+
+**View 1:10000 Maps:**
+*   **🔍 ['COMMERCIAL LAND USE - Distribution of Land Parcels with Divided or Undivided Properties and Commercial Activities (Level: Municipal District 1)'](https://drive.google.com/file/d/1CDfOAaO4dsh1R37baieLd4kILJZgyGVI/preview)**
+*   **🔍 ['BASEMENT RESIDENCES - Distribution of Land Parcels with Divided Properties and Subterranean Residential Use (Level: Municipal District 1)'](https://drive.google.com/file/d/1e40BjA6_gUFRrpHMJBP0fEM_QJh4YUOD/preview)**
+
+<br>
 
 #### 📍 CORINTH (Local Urban Plan)
-*   **🔍 [View 'Regional Context & Integration' Map - 1:400000 (PDF)](https://drive.google.com/file/d/1l_UHRWgQ1TA13GE-vaNt2YEk9JnrlhFb/preview)**
-*   **🔍 [View 'Spatial Organization - Existing Condition' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1m3PdVZWPmxPl15DtYkNBDXi4YILGipwY/preview)**
-*   **🔍 [View 'Residential Receivers: Loutra Oreas Elenis, Siemens Settlement' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1sQJIBx7tER1p4Fw6B2EBxhRQ7B3uWnYG/preview)**
-*   **🔍 [View 'Residential Receivers: Katakali, Vlaseika' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1Js3wsA2Sl1tVprFwhidslwsgatMmrHB_/preview)**
-*   **🔍 [View 'Residential Receivers: Korfos' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1U1DE0GQ0hF_IYrGiMCy6PLuzWPo4XYZx/preview)**
+*   **🔍 View 1:400000 Map ['Regional Context & Integration'](https://drive.google.com/file/d/1l_UHRWgQ1TA13GE-vaNt2YEk9JnrlhFb/preview)**
+*   **🔍 View 1:25000 Map ['Spatial Organization - Existing Condition'](https://drive.google.com/file/d/1m3PdVZWPmxPl15DtYkNBDXi4YILGipwY/preview)**
 
-#### 📍 AIGIALEIA (Settlement Delimitation)
-*   **🔍 [View 'GGRS87 Coordinates Issue of the Settlement Delimitation Study (PDF booklet)](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/preview)**
-*   **🔍 [View 'DELIMITATION OF "AKRATA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/16IwhdPa9DFG79DV5v5Z-AY7c-2b6HLMK/preview)**
-*   **🔍 [View 'DELIMITATION OF "KAMARES" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1WXNvza6gzYQ0nnQa-ILQ2z38Bk7ZJjKE/preview)**
-*   **🔍 [View 'DELIMITATION OF "NIKOLEIKA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1P3keHbKqXaWvY4EsPv_rMPsHYG3VDc61/preview)**
-*   **🔍 [View 'DELIMITATION OF "PARALIA PLATANOU" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/19NqMUDUvue7OTUfZR2rc91X1kvuvvTdK/preview)**
+**View 1:5000 Map Sheets:**
+*   **🔍 ['Residential Receivers: Loutra Oreas Elenis, Siemens Settlement'](https://drive.google.com/file/d/1sQJIBx7tER1p4Fw6B2EBxhRQ7B3uWnYG/preview)**
+*   **🔍 ['Residential Receivers: Katakali, Vlaseika'](https://drive.google.com/file/d/1Js3wsA2Sl1tVprFwhidslwsgatMmrHB_/preview)**
+*   **🔍 ['Residential Receivers: Korfos'](https://drive.google.com/file/d/1U1DE0GQ0hF_IYrGiMCy6PLuzWPo4XYZx/preview)**
+
+<br>
 
 #### 📍 CRETE, Agios Vasileios (Settlement Delimitation)
-*   **🔍 [View 'SPATIAL CONTEXT & INTEGRATION' Map - 1:650000 (PDF)](https://drive.google.com/file/d/1bB1uo9jbd-FHdHB-Oj4tJaDFQ6rkEPAe/preview)**
-*   **🔍 [View 'Location of Settlements within the Wider Region (Sheet 2)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1Td0UJ0ndtuG6pbbiW92fA42nnrOVISg7/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 1' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1IH3JX6fJCR0VbJhWUvZ5KsNjHXOEFvIp/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 2' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1FyxH6INFETxpgVQU65wAR7o-MgY4g9zP/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 19' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1NJx8nQcnGc-ecBri6YpeAsUt7O-IhsV2/view?usp=drive_link)**
+*   **🔍 View 1:650000 Map ['SPATIAL CONTEXT & INTEGRATION'](https://drive.google.com/file/d/1bB1uo9jbd-FHdHB-Oj4tJaDFQ6rkEPAe/preview)**
+*   **🔍 View 1:25000 Map ['Location of Settlements within the Wider Region (Sheet 2)'](https://drive.google.com/file/d/1Td0UJ0ndtuG6pbbiW92fA42nnrOVISg7/preview)**
+
+**View 1:5000 Map Sheets:**
+*   **🔍 ['Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 1'](https://drive.google.com/file/d/1IH3JX6fJCR0VbJhWUvZ5KsNjHXOEFvIp/preview)**
+*   **🔍 ['Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 2'](https://drive.google.com/file/d/1FyxH6INFETxpgVQU65wAR7o-MgY4g9zP/preview)**
+*   **🔍 ['Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 19'](https://drive.google.com/file/d/1NJx8nQcnGc-ecBri6YpeAsUt7O-IhsV2/view?usp=drive_link)**
+
+<br>
+
+#### 📍 AIGIALEIA (Settlement Delimitation)
+*   **🔍 View PDF A4 booklet ['GGRS87 Coordinates Issue of the Settlement Delimitation Study'](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/preview)**
+
+**View 1:5000 Map Sheets:**
+*   **🔍 ['DELIMITATION OF "AKRATA" SETTLEMENT - Proposed Boundaries & Settlement Zones'](https://drive.google.com/file/d/16IwhdPa9DFG79DV5v5Z-AY7c-2b6HLMK/preview)**
+*   **🔍 ['DELIMITATION OF "KAMARES" SETTLEMENT - Proposed Boundaries & Settlement Zones'](https://drive.google.com/file/d/1WXNvza6gzYQ0nnQa-ILQ2z38Bk7ZJjKE/preview)**
+*   **🔍 ['DELIMITATION OF "NIKOLEIKA" SETTLEMENT - Proposed Boundaries & Settlement Zones'](https://drive.google.com/file/d/1P3keHbKqXaWvY4EsPv_rMPsHYG3VDc61/preview)**
+*   **🔍 ['DELIMITATION OF "PARALIA PLATANOU" SETTLEMENT - Proposed Boundaries & Settlement Zones'](https://drive.google.com/file/d/19NqMUDUvue7OTUfZR2rc91X1kvuvvTdK/preview)**
+
+<br>
 
 ---
 
-## 💻 Code Highlights & Technical Innovation
-**Selected snippets demonstrating advanced automation and surgical problem-solving** 
+## 💻 Code Highlights & Technical Innovation - Part A: 6 GRIPPING EXAMPLES
 
-*(...and as the term "snippet" suggests, it is a changed and very short piece of the real source code, just to demostrate the **key-point** of the full script - don't forget to check the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio) after this section)*
+Selected snippets demonstrating **advanced automation and surgical problem-solving** 
+
+*(...check the [**SHOWCASE](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio) and the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio))*
+
+
+<br>
 
 ### 1. QGIS_Multiprocessor_Audit.py → High-Performance Spatial Audit (PyQGIS & Multiprocessing)
 **Concept:** Leveraging multi-core architecture to perform geometry validation across massive national datasets.
@@ -215,6 +249,8 @@ This script is a high-performance geometry validation and repair engine designed
 
 *   **Go to [Documentation](repository/QGIS_Multiprocessor_Audit_README.md) or go to [Snippet](repository/QGIS_Multiprocessor_Audit.py)** page.
 
+<br>
+
 ### 2. PymuPDF_corrections.py → Cartographic Patching & PDF Stream Manipulation
 **Concept:** Post-processing exported map layouts to avoid time-consuming re-rendering/re-plotting.
 > [!IMPORTANT]
@@ -289,6 +325,8 @@ Saved approximately 3 working days of re-plotting for a project involving over 1
 
 *   **Go to [Documentation](repository/PymuPDF_corrections_README.md) or go to [Snippet](repository/PymuPDF_corrections.py)** page.
 
+<br>
+
 ### 3. BatchExportPoints.lsp → CAD-to-GIS Data Bridge (AutoLISP & ObjectDBX)
 **Concept:** Automated high-speed extraction of survey tachymetric points from hundreds of closed DWG files into a unified GIS-ready format.
 > [!NOTE]
@@ -357,6 +395,8 @@ Streamlined the CAD-to-GIS pipeline for massive topographic datasets, ensuring z
 </details>
 
 *   **Go to [Documentation](repository/BatchExportPoints_README.md) or go to [Snippet](repository/BatchExportPoints.lsp)** page.
+
+<br>
 
 ### 4. QGZ_Styling_Engine.py → When QGIS is stabbon, you had to do something to obey...
 **Concept:** 
@@ -444,6 +484,8 @@ Ensured 100% compliance with national cartographic specifications across thousan
 
 *   **Go to [Documentation](repository/QGZ_Styling_Engine_README.md) or go to [Snippet](repository/QGZ_Styling_Engine.py)** page.
 
+<br>
+
 ### 5. Intelligent Parallel File Deployment (PowerShell & RoboCopy)
 **Concept:** Multi-threaded distribution of GIS deliverables across complex, national-scale directory structures.
 > [!NOTE]
@@ -514,6 +556,8 @@ Optimized office-to-server data migration, reducing transfer times for large dat
 </details>
 
 *   **Go to [Documentation](repository/COPY_in_STRUCTURE_README.md) or go to [Snippet](repository/COPY_in_STRUCTURE.ps1)** page.
+
+<br>
 
 ### 6. SHP_VERIFIER.py → Thorough Final Step Validation of Data before Deliverance to Contracting Authority
 **Concept:** Ensures strict adherence to technical specifications by verifying folder structures, validating schema integrity, and performing attribute normalization.
@@ -590,6 +634,528 @@ This script is a comprehensive validation engine designed to audit the **SHAPE**
 
 *   **[Go to Documentation](repository/SHP_VERIFIER_README.md)** page.
 
+<br>
+
+---
+
+## 💻 Code Highlights & Technical Innovation - Part B: SHOWCASE
+
+**Detailed pipeline demonstration of advanced automation.** 
+
+*(...check the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio))*
+
+<br>
+
+### QGIS Topology & Atlas Automation Pipeline (PyQGIS)
+
+A condensed showcase from a real production workflow for automatic coordinate-table generation of settlement boundaries and zoning polygons.
+
+This is a sample of the final output: [GGRS87 Settlement Coordinate Tables.pdf](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/preview)
+
+**The pipeline:**
+
+```text
+INPUT: just 2 polygon layers (Settlements & Zones)
+→ Reorder.py
+→ Vertex_numbering.py
+→ Joined_layer.py
+→ XY_Table.py
+→ OUTPUT: Atlas PDF export:
+A4 pages of coordinate tables for every settlement
+(with outer boundaries and inner zone vertices, hierarchically and topologically ordered)
+```
+
+**Main goals:**
+- deterministic polygon traversal
+- northernmost starting vertex
+- clockwise numbering
+- shared-vertex inheritance between polygons
+- topology-safe vertex order of coordinate tables
+- automated atlas-ready reporting
+
+<br>
+
+**Challenges:**
+- Settlements sometimes consist of 2 or 3 different polygons
+- Inner zones have various types and many different zone polygons may be of the same type
+- Common vertices exist:
+    - between outer boundaries of a few neighboring settlements
+	- between outer boundaries and inner zones at every settlement
+	- between adjacent zones of a settlement
+- Coordinate tables for every settlement should:
+	- start from the outer boundary vertices
+	- continue with each polygon of the same type, for every zone type hierarchically
+- Vertex numbering should be clockwise, starting from the northernmost vertex
+- Each vertex point should be numbered ONCE...
+	- (...EXCEPT the common vertices of neighboring settlements, the only case of duplicates permitted)
+- Topological order of zone vertices should be presented in tables, so:
+	- if e.g. 12-13-14 is the correct order for a zone, 14-13-12 should possibly be the correct order for the adjucent zone
+- Vertex count is very diverse for every settlement
+	- but Atlas pages should have no gaps and empty spaces
+
+
+<br>
+
+#### I. Reorder polygon vertices
+
+Force polygons to:
+- start from the northernmost vertex
+- continue clockwise
+- preserve deterministic numbering
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+geom.forceRHR()  # Right Hand Rule
+
+nodes = ring[:-1]
+
+max_y_idx = max(
+    range(len(nodes)),
+    key=lambda i: (nodes[i].y(), -nodes[i].x())
+)
+
+reordered_nodes = (
+    nodes[max_y_idx:] +
+    nodes[:max_y_idx]
+)
+
+reordered_nodes.append(reordered_nodes[0])
+```
+
+</details>
+
+This guarantees that:
+- vertex 1 is always the northernmost point
+- numbering proceeds clockwise
+- polygon topology becomes reproducible
+
+<br>
+
+#### II. Generate topology-aware vertices
+
+Extract polygon vertices:
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+processing.run(
+    "native:extractvertices",
+    {
+        'INPUT': layer_obj,
+        'OUTPUT': 'memory:temp'
+    }
+)
+```
+
+</details>
+
+Then remove duplicated polygon-closing vertices.
+
+Instead of relying on:
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+maximum(vertex_index)
+```
+
+</details>
+
+**Use coordinate-based topology logic:**
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+seen = set()
+ids_to_delete = []
+
+for f in v_zon.getFeatures():
+
+    geom = f.geometry().asPoint()
+
+    key = (
+        str(f['Oik_Name']),
+        str(f['Poly_ID']),
+        str(f['ZO_Eidos']),
+        round(geom.x(), 8),
+        round(geom.y(), 8)
+    )
+
+    if key in seen:
+        ids_to_delete.append(f.id())
+    else:
+        seen.add(key)
+```
+
+</details>
+
+This removes ONLY:
+- artificial polygon closure duplicates
+
+while preserving:
+- shared vertices between polygons
+- T-junctions
+- multipart topology
+- ring topology
+
+<br>
+
+#### III. Global settlement numbering
+
+All polygons inside the same settlement share a common numbering space.
+- External settlement boundaries are numbered first.
+- Then internal zones continue numbering while preserving shared vertices numbers.
+
+**Core logic:**
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+expr = QgsExpression("""
+array_find(
+    array_agg(
+        $id,
+        group_by:="Oik_Name" || '_' || coalesce("Part_ID", 0),
+        order_by:=
+            if("layer" = 'Vertices OIK', '1', '2') ||
+            lpad(case
+                when "ZO_Eidos" = 'Α' then '1'
+                when "ZO_Eidos" = 'Β' then '2'
+                when "ZO_Eidos" = 'Β1' then '3'
+                when "ZO_Eidos" = 'Ζ.Α.Ο.' then '4'
+                when "ZO_Eidos" = 'Π.Ε.Χ.' then '5'
+                else '6'
+            end, 2, '0') ||
+            lpad(coalesce("vertex_index", 0), 10, '0')
+    ),
+    $id
+) + 1
+""")
+```
+
+</details>
+
+This creates:
+- deterministic numbering
+- reproducible labels
+- shared-label inheritance
+- topology-consistent coordinate tables
+
+<br>
+
+#### IV. Merge OIK + Zone vertices BEFORE spatial join
+
+Critical discovery:
+
+Shared vertices of outer boundaries disappear if only zone vertices participate in the spatial join.
+
+Correct approach:
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+merged = processing.run(
+    "native:mergevectorlayers",
+    {
+        'LAYERS': [v_oik, v_zon],
+        'OUTPUT': 'memory:Merged'
+    }
+)['OUTPUT']
+```
+
+</details>
+
+Then spatially join against the final numbered vertex layer:
+
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+joined = processing.run(
+    "native:joinattributesbylocation",
+    {
+        'INPUT': merged,
+        'JOIN': koryfes,
+        'PREDICATE': [0],
+        'JOIN_FIELDS': ['LABEL', 'K_X', 'K_Y'],
+        'METHOD': 1,  # one-to-many
+        'OUTPUT': QgsProcessing.TEMPORARY_OUTPUT
+    }
+)['OUTPUT']
+```
+
+</details>
+
+This preserves:
+- shared labels
+- shared coordinates
+- boundary continuity
+- zone topology
+
+<br>
+
+#### V. Prevent duplicated OIK vertices in zone tables
+
+The joined layer contains:
+
+```text
+VerticesOIK
+VerticesZON
+```
+
+Only actual zone traversal vertices should appear in zone coordinate tables.
+
+Critical filter:
+
+```python
+if str(f['layer']) == 'VerticesZON'
+```
+
+This eliminates:
+- duplicated boundary tails
+- repeated numbering sequences
+- atlas table corruption
+
+while preserving:
+- true shared topology
+- inherited labels
+
+<br>
+
+#### VI. Atlas-ready coordinate tables
+
+The final `xy_table` layer stores:
+
+```text
+Oik_Name
+G_Ord
+S_Ord
+L_Int
+Lbl
+X
+Y
+Is_H
+Line_Weight
+```
+
+Used directly inside QGIS Layout multi-frame tables.
+
+<br>
+
+**Hierarchy, Topological Order, Page Manipulation:**
+
+- Table frames consist of 3 columns:  Lbl, X, Y  → already formatted in xy_table:
+
+Coordinate formatting:
+
+```python
+format(num, ",.2f")
+    .replace(",", "X")
+    .replace(".", ",")
+    .replace("X", ".")
+```
+
+Result:
+
+```text
+Greek number formatting, e.g.:
+335.698,30
+```
+
+Greek cadastral formatting with:
+- thousand separators
+- fixed decimals
+- aligned coordinate columns
+
+<br>
+
+- Sorting is:
+    - G_Ord → ascending
+    - S_Ord → ascending
+    - L_int → ascending
+- ZONE HEAdERS and ZONE VERTICES are the most interesting sections in XY_Table.py, as they define:
+    - the header of every zone at the table by type / polygon number / area
+    - the desired way of numbering and sorting of labels and coordinates
+
+**ZONE HEADERS code**
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+# ---------------------------------------------------------
+# ZONE HEADERS
+# ---------------------------------------------------------
+
+zone_headers = {}
+
+for z in zones.getFeatures():
+
+    if not z['ZO_Eidos']:
+        continue
+
+    key = (
+        str(z['Oik_Name']),
+        str(z['ZO_Eidos']),
+        to_int(z['Poly_ID'])
+    )
+
+    if key not in zone_headers:
+        zone_headers[key] = z
+
+sorted_zone_keys = sorted(
+    zone_headers.keys(),
+    key=lambda k: (
+        k[0],
+        zone_order.get(k[1], 99),
+        k[2]
+    )
+)
+
+for key in sorted_zone_keys:
+
+    z = zone_headers[key]
+
+    try:
+        area = round(float(str(z['AREA'])) / 1000.0, 2)
+    except:
+        area = 0
+
+    new_features.append(make_feature({
+        'Oik_Name': str(z['Oik_Name']),
+        'G_Ord': zone_order.get(str(z['ZO_Eidos']), 99),
+        'S_Ord': to_int(z['Poly_ID']),
+        'L_Int': -1,
+        'Lbl': 'Ζώνη {} #{}\n({:.2f} στρ.)'.format(
+            str(z['ZO_Eidos']),
+            to_int(z['Poly_ID']),
+            area
+        ),
+        'X': '',
+        'Y': '',
+        'Is_H': 1,
+        'Line_Weight': 2
+    }))
+
+```
+
+</details>
+
+<br>
+
+**ZONE VERTICES code**
+<details>
+<summary>📂 Click to unfold python code</summary>
+
+```python
+# ---------------------------------------------------------
+# ZONE VERTICES
+# ---------------------------------------------------------
+
+zon_feats = sorted(
+    [
+        f for f in v_zon.getFeatures()
+        if (
+            f['vertex_index'] is not None and
+            f['Poly_ID'] is not None and
+            f['ZO_Eidos'] is not None and
+            str(f['layer']) == 'VerticesZON'
+        )
+    ],
+    key=lambda f: (
+        str(f['Oik_Name']),
+        zone_order.get(str(f['ZO_Eidos']), 99),
+        to_int(f['Poly_ID']),
+        to_int(f['vertex_index'])
+    )
+)
+
+for f in zon_feats:
+
+    new_features.append(make_feature({
+        'Oik_Name': str(f['Oik_Name']),
+        'G_Ord': zone_order.get(str(f['ZO_Eidos']), 99),
+        'S_Ord': to_int(f['Poly_ID']),
+        'L_Int': to_int(f['vertex_index']),
+        'Lbl': str(to_int(f['LABEL'])),
+        'X': fmt_coord(f['K_X']),
+        'Y': fmt_coord(f['K_Y']),
+        'Is_H': 0,
+        'Line_Weight': 1
+    }))
+
+```
+
+</details>
+
+<br>
+
+- Atlas controlled by OIK_multi layer (aggregate from settlement layer, grouped by "Oik_Name").
+	- Filter with: 
+	
+```text
+"Oik_Name" = @atlas_pagename
+```
+
+- In OIK_Multi a special field "TotalLines" (integer) added → 
+
+```text
+aggregate(layer:='xy_table', aggregate:='sum', expression:="Line_Weight", filter:="Oik_Name" = attribute(@parent, 'Oik_Name'))
+```
+
+...so counting table rows that fit in each page, the 'Exclude Page from Exports' override becomes:
+
+- for page 2:
+
+```text
+"TotalLines" <= 180
+```
+- and for page 3:
+
+```text
+"TotalLines" <= 372
+```
+
+and finally, the 'Main Properties' for every footnote label at lauoyt pages becomes:
+
+```text
+[% 
+@atlas_pagename || ' - Σελίδα ' || @layout_page || ' από ' || 
+  CASE 
+    WHEN "TotalLines" <= 180 THEN 1
+    WHEN "TotalLines" <= 375 THEN 2
+    ELSE 3
+  END
+%]
+```
+
+<br>
+
+#### Final Result
+
+The final workflow automatically generates:
+- topology-safe settlement coordinate tables
+- atlas-ready PDF layouts
+- shared-vertex numbering
+- deterministic polygon traversal
+- multipart-aware zoning reports
+
+using only:
+- PyQGIS
+- GeoPackage
+- QGIS Atlas
+- Layout multiframe tables
+
+Sample Output here: [GGRS87 Settlement Coordinate Tables.pdf](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/preview)
+
+<br>
+
 ---
 
 ## 🐍 Programming & Automation Portfolio
@@ -601,19 +1167,20 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 
 ### 🛠️ Script & Tool Catalog
 
-#### I. Data Validation & Quality Control (QA/QC)
+#### I. ETL, Database & Workflow Integration
+*   **Cadastre Points Pipeline (LISP + Python):** A hybrid workflow (**BatchExportPoints.lsp → SplitPoints.py**) for generating schema-compliant "BLOCK_PNT" shapefiles from topographic CAD surveys and tachymetric points saved as points or blocks in DWG/DXF files.
+*   **Reorder.py → Vertex_numbering.py → Joined_layer.py → XY_Table.py:** Workflow for clockwise vertex numbering and automatic coordinate-table generation of settlement outer boundaries and inner zoning polygons.
+*   **Update_from_Merge.py:** Synchronizes attribute corrections (e.g., ADDRESS/NUM fixes) from a "Master" layer back to hundreds of individual shapefiles across a project's directory structure.
+*   **Fix_DBOUND_KYR.py:** Automated batch-update for Administrative Act boundaries across hundreds of CAD basemaps, synchronizing decision IDs and dates.
+*   **Building Data Integrator (SQL + Python):** Extraction of building numbers from Oracle DB and automated array-based insertion into AutoCAD Map to prevent label overlapping.
+*   **FBOUND_split.py:** Automated forestry data processing (clipping, area calculations, and attribute formatting) while filtering out sliver polygons.
+
+#### II. Data Validation & Quality Control (QA/QC)
 *   **SHP_VERIFIER.py:** Comprehensive validation engine for deliverable folders. It ensures folder structure compliance, verifies/corrects field schemas (names, types, lengths), and auto-generates mandatory missing layers.
 *   **ChkGeom.py:** High-performance **multiprocessing** engine (6 parallel threads) that identifies and fixes topology errors (self-intersections, null geometries), exporting georeferenced error logs.
 *   **ROADS_Check.py:** Specialized validation for linear road networks. Prevents server-side loading errors by generating "Erase" and "Error" layers using multi-source spatial joins.
 *   **Find_Multiparts.py:** Scans layers for non-compliant multi-part geometries and generates detailed reports for manual or automated single-part conversion.
 *   **Find_Irregulars.py:** Spatial analysis script for identifying and exporting irregular parcel geometries for manual cadastral audit.
-
-#### II. ETL, Database & Workflow Integration
-*   **Cadastre Points Pipeline (LISP + Python):** A hybrid workflow (**BatchExportPoints.lsp → SplitPoints.py**) for generating schema-compliant "BLOCK_PNT" shapefiles from topographic CAD surveys and tachymetric points saved as points or blocks in DWG/DXF files.
-*   **Update_from_Merge.py:** Synchronizes attribute corrections (e.g., ADDRESS/NUM fixes) from a "Master" layer back to hundreds of individual shapefiles across a project's directory structure.
-*   **Fix_DBOUND_KYR.py:** Automated batch-update for Administrative Act boundaries across hundreds of CAD basemaps, synchronizing decision IDs and dates.
-*   **Building Data Integrator (SQL + Python):** Extraction of building numbers from Oracle DB and automated array-based insertion into AutoCAD Map to prevent label overlapping.
-*   **FBOUND_split.py:** Automated forestry data processing (clipping, area calculations, and attribute formatting) while filtering out sliver polygons.
 
 #### III. Advanced Cartography & Map Production
 *   **PymuPDF_corrections.py:** High-speed post-processing of exported PDFs. Replaces logos, fixes typos, and adjusts font sizes directly in the PDF stream, avoiding time-consuming re-plotting.
@@ -633,6 +1200,8 @@ I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, a
 *   **Statistics_Engine.py:** Automated statistical analysis of built environments, generating floor area distributions per urban unit.
 *   **Stage7_Filter.py:** High-speed parser for massive "Prechecks.txt" log file, after uploading deliverables to the server of 'Hellenic Cadastre'. Isolates critical forestry errors from multi-thousand-lines in log.
 
+<br>
+
 ---
 
 ## 🎓 Professional Philosophy
@@ -641,6 +1210,8 @@ I remain a lifelong student of Geomatics, no matter how accomplished I am. That'
 I foster team environments where technical innovation and creative initiatives thrive. 
 The "attention to detail" ethic is perhaps one of my weaknesses, as *"I will δο it right, even if no one ever notices"*... 
 And surely, **I LOVE MAPS!!!**
+
+<br>
 
 ---
 
