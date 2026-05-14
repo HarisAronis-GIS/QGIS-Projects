@@ -660,8 +660,7 @@ INPUT: just 2 polygon layers (Settlements & Zones)
 → Vertex_numbering.py
 → Joined_layer.py
 → XY_Table.py
-→ OUTPUT: Atlas PDF export:
-A4 pages of coordinate tables for every settlement
+→ OUTPUT: Atlas PDF export of A4 pages of coordinate tables for every settlement
 (with outer boundaries and inner zone vertices, hierarchically and topologically ordered)
 ```
 
