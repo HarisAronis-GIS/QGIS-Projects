@@ -1156,7 +1156,7 @@ Sample Output here: [GGRS87 Settlement Coordinate Tables.pdf](https://drive.goog
 I develop custom solutions in **Python (PyQGIS/GDAL)**, **AutoLISP**, **SQL**, and **PowerShell** to automate large-scale geospatial workflows and ensure high-standard data integrity.
 
 > [!NOTE]
-> Due to proprietary restrictions, full source code is not public. But you can find [below](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-code-highlights--technical-innovation) detailed **Technical READMEs** and **Snippets** of selected scripts that demonstrate innovating *problem-solving* and/or *resources-saving* processes.
+> Due to proprietary restrictions, full source code is not public. But already you should have found [above](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-code-highlights--technical-innovation---part-a-6-gripping-examples) detailed **Technical READMEs** and **Snippets** of selected scripts that demonstrate innovating *problem-solving* and/or *resources-saving* processes.
 
 ### 🛠️ Script & Tool Catalog
 
