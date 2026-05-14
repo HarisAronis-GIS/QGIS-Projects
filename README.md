@@ -948,9 +948,8 @@ Used directly inside QGIS Layout multi-frame tables.
 
 <br>
 
-- **Hierarchy, Topological Order, Page Manipulation:**
- 	- Table frames consist of 3 columns:  Lbl, X, Y  → already formatted in xy_table:
-- Coordinate formatting:
+- Table frames consist of 3 columns:  **Lbl**, **X**, **Y**  → already formatted in xy_table:
+	- Coordinate formatting:
 
 ```python
 format(num, ",.2f")
@@ -972,14 +971,14 @@ Greek number formatting, e.g.:
 
 <br>
 
-- Sorting is:
-    - G_Ord → ascending
-    - S_Ord → ascending
-    - L_int → ascending
-
-- ZONE HEADERS and ZONE VERTICES are the most interesting sections in XY_Table.py, as they define:
-    - the header of every zone at the table by type / polygon number / area
-    - the desired way of numbering and sorting of labels and coordinates
+- **Hierarchy, Topological Order, Page Manipulation:**
+	- Sorting is:
+    	- G_Ord → ascending
+    	- S_Ord → ascending
+    	- L_int → ascending
+	- ZONE HEADERS and ZONE VERTICES are the most interesting sections in XY_Table.py, as they define:
+    	- the header of every zone at the table by type / polygon number / area
+    	- the desired way of numbering and sorting of labels and coordinates
 
 **ZONE HEADERS section code**
 <details>
