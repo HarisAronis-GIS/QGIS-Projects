@@ -61,19 +61,19 @@ I am a **Rural & Surveying Engineer (NTUA)** with 30 years of experience at the 
 *   **🔍 [View 'Residential Receivers: Katakali, Vlaseika' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1Js3wsA2Sl1tVprFwhidslwsgatMmrHB_/preview)**
 *   **🔍 [View 'Residential Receivers: Korfos' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1U1DE0GQ0hF_IYrGiMCy6PLuzWPo4XYZx/preview)**
 
-#### 📍 CRETE, Agios Vasileios (Settlement Delimitation)
-*   **🔍 [View 'SPATIAL CONTEXT & INTEGRATION' Map - 1:650000 (PDF)](https://drive.google.com/file/d/1bB1uo9jbd-FHdHB-Oj4tJaDFQ6rkEPAe/preview)**
-*   **🔍 [View 'Location of Settlements within the Wider Region (Sheet 2)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1Td0UJ0ndtuG6pbbiW92fA42nnrOVISg7/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 1' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1IH3JX6fJCR0VbJhWUvZ5KsNjHXOEFvIp/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 2' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1FyxH6INFETxpgVQU65wAR7o-MgY4g9zP/preview)**
-*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 19' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1NJx8nQcnGc-ecBri6YpeAsUt7O-IhsV2/view?usp=drive_link)**
-
 #### 📍 AIGIALEIA (Settlement Delimitation)
 *   **🔍 [View 'GGRS87 Coordinates Issue of the Settlement Delimitation Study (PDF booklet)](https://drive.google.com/file/d/1OxSt-sj-_ZGnrHqoz-TddLxoS84IczH3/preview)**
 *   **🔍 [View 'DELIMITATION OF "AKRATA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/16IwhdPa9DFG79DV5v5Z-AY7c-2b6HLMK/preview)**
 *   **🔍 [View 'DELIMITATION OF "KAMARES" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1WXNvza6gzYQ0nnQa-ILQ2z38Bk7ZJjKE/preview)**
 *   **🔍 [View 'DELIMITATION OF "NIKOLEIKA" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1P3keHbKqXaWvY4EsPv_rMPsHYG3VDc61/preview)**
 *   **🔍 [View 'DELIMITATION OF "PARALIA PLATANOU" SETTLEMENT - Proposed Boundaries & Settlement Zones' Map - 1:5000 (PDF)](https://drive.google.com/file/d/19NqMUDUvue7OTUfZR2rc91X1kvuvvTdK/preview)**
+
+#### 📍 CRETE, Agios Vasileios (Settlement Delimitation)
+*   **🔍 [View 'SPATIAL CONTEXT & INTEGRATION' Map - 1:650000 (PDF)](https://drive.google.com/file/d/1bB1uo9jbd-FHdHB-Oj4tJaDFQ6rkEPAe/preview)**
+*   **🔍 [View 'Location of Settlements within the Wider Region (Sheet 2)' Map - 1:25000 (PDF)](https://drive.google.com/file/d/1Td0UJ0ndtuG6pbbiW92fA42nnrOVISg7/preview)**
+*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 1' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1IH3JX6fJCR0VbJhWUvZ5KsNjHXOEFvIp/preview)**
+*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 2' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1FyxH6INFETxpgVQU65wAR7o-MgY4g9zP/preview)**
+*   **🔍 [View 'Existing Condition of Settlements (Map & Qualitative Attributes Tables) - Sheet 19' Map - 1:5000 (PDF)](https://drive.google.com/file/d/1NJx8nQcnGc-ecBri6YpeAsUt7O-IhsV2/view?usp=drive_link)**
 
 ---
 
