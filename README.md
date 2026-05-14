@@ -111,7 +111,7 @@ I am a *Rural & Surveying Engineer* graduate of NTUA, with 30 years of experienc
 
 Selected snippets demonstrating **advanced automation and surgical problem-solving** 
 
-*(...check the [**SHOWCASE](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio) and the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio))*
+*(...check the [**SHOWCASE**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio) and the full [**Programming & Automation Portfolio**](https://github.com/HarisAronis-GIS/QGIS-Projects/blob/main/README.md#-programming--automation-portfolio))*
 
 
 <br>
